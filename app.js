@@ -1,0 +1,515 @@
+(() => {
+  const { createElement: h, useEffect, useMemo, useState, useCallback, useRef } = React;
+
+  /* ---------------- Utilities ---------------- */
+  const toRel = (input) => {
+    if (input == null) return null;
+    let val = input;
+    for (let i = 0; i < 3 && typeof val === "object"; i++) {
+      if (val instanceof URL) { val = val.toString(); break; }
+      if (Array.isArray(val)) { val = val.find(Boolean); continue; }
+      val =
+        val.file ??
+        val.url ??
+        val.href ??
+        val.src ??
+        val.path ??
+        (typeof val.toString === "function" ? val.toString() : "");
+    }
+    const s = String(val ?? "").trim();
+    if (!s) return null;
+    if (/^(https?:)?\/\//i.test(s)) return s;
+    if (s.startsWith("//")) return (self.location?.protocol || "https:") + s;
+    if (s[0] === "/" && s[1] !== "/") return `.${s}`;
+    return s;
+  };
+
+  // Avoid stale SW in local dev
+  (function unregisterSWOnLocalhost() {
+    try {
+      const host = location.hostname;
+      if ((host === "localhost" || host === "127.0.0.1") && "serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then(rs => rs.forEach(r => r.unregister()));
+      }
+    } catch (_) {}
+  })();
+
+  function showFatalError(message, err) {
+    try {
+      const root = document.getElementById("root");
+      if (!root) return;
+      root.innerHTML = "";
+      const box = document.createElement("div");
+      box.style.cssText =
+        "background:#111;color:#fff;padding:20px;font-family:monospace;white-space:pre-wrap;";
+      const title = document.createElement("div");
+      title.textContent = "Erro fatal ao carregar a aplicação";
+      title.style.fontWeight = "700";
+      title.style.marginBottom = "8px";
+      const msg = document.createElement("div");
+      msg.textContent = message;
+      const pre = document.createElement("pre");
+      pre.textContent = (err && err.stack) || String(err || "");
+      pre.style.marginTop = "12px";
+      pre.style.maxHeight = "60vh";
+      pre.style.overflow = "auto";
+      box.appendChild(title);
+      box.appendChild(msg);
+      box.appendChild(pre);
+      root.appendChild(box);
+    } catch (_) {}
+  }
+  addEventListener("error", (ev) =>
+    showFatalError(ev.message || "Script error.", ev.error || ev)
+  );
+  addEventListener("unhandledrejection", (ev) =>
+    showFatalError(
+      ev?.reason ? ev.reason.message || String(ev.reason) : "Unhandled promise rejection",
+      ev?.reason || ev
+    )
+  );
+
+  /* --------------- Routing (hash) --------------- */
+  const ROUTES = { home: "home", apresentacao: "apresentacao", faixas: "faixas" };
+  const normalizeHash = (hash) => String(hash || "").replace(/^#/, "").trim().toLowerCase();
+
+  function parseRoute(hash) {
+    const v = normalizeHash(hash);
+    if (!v) return { name: ROUTES.home };
+    if (v === ROUTES.apresentacao || v === "apresentação") return { name: ROUTES.apresentacao };
+    if (v === ROUTES.faixas) return { name: ROUTES.faixas };
+    if (v.startsWith("faixas/")) {
+      const slug = v.slice("faixas/".length).trim();
+      return { name: "faixas-detail", slug };
+    }
+    return { name: ROUTES.home };
+  }
+
+  function useHashRoute(defaultRoute) {
+    const [route, setRoute] = useState(() => parseRoute(location.hash) || { name: defaultRoute });
+    useEffect(() => {
+      const onHash = () => setRoute(parseRoute(location.hash));
+      addEventListener("hashchange", onHash);
+      return () => removeEventListener("hashchange", onHash);
+    }, []);
+    const navigate = useCallback((r) => { location.hash = r; }, []);
+    return [route, navigate];
+  }
+
+  /* --------------- Audio (Howler) --------------- */
+  function useAudio() {
+    const [state, setState] = useState({ id: null, playing: false });
+    const ref = useRef({ id: null, howl: null });
+
+    const teardown = useCallback((stop = true) => {
+      const cur = ref.current;
+      if (cur.howl) {
+        try { if (stop) cur.howl.stop(); } catch {}
+        try { cur.howl.unload(); } catch {}
+      }
+      ref.current = { id: null, howl: null };
+      setState({ id: null, playing: false });
+    }, []);
+
+    const toggle = useCallback((id, src) => {
+      const HowlCtor = window.Howl || (window.Howler && window.Howler.Howl);
+      if (!HowlCtor || !id || !src) return;
+      src = toRel(src);
+      const cur = ref.current;
+
+      if (cur.id === id && cur.howl) {
+        if (cur.howl.playing()) { cur.howl.pause(); setState({ id, playing: false }); }
+        else { cur.howl.play(); setState({ id, playing: true }); }
+        return;
+      }
+
+      teardown();
+      const howl = new HowlCtor({
+        src: [src],
+        html5: true,
+        onend: () => teardown(false),
+        onstop: () => teardown(false),
+      });
+      ref.current = { id, howl };
+      setState({ id, playing: true });
+      howl.play();
+    }, [teardown]);
+
+    return { id: state.id, playing: state.playing, toggle, stopAll: teardown };
+  }
+
+  /* --------------- Data --------------- */
+  async function tryJson(url) {
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(String(res.status));
+      return await res.json();
+    } catch { return null; }
+  }
+
+  function usePresentation() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      (async () => {
+        const url = new URL("./data/presentation.json", location.href).toString();
+        const json = await tryJson(url);
+        setData(json);
+        setLoading(false);
+      })();
+    }, []);
+    return { data, loading };
+  }
+
+  async function loadAllSongs() {
+    const candidates = [
+      "./data/songs.json",
+      "./data/fsongs.json",
+      "./data/tracks.json",
+    ].map((p) => new URL(p, location.href).toString());
+
+    let raw = null;
+    for (const url of candidates) {
+      raw = await tryJson(url);
+      if (Array.isArray(raw)) break;
+    }
+
+    if (!Array.isArray(raw) && raw && typeof raw === "object") {
+      if (Array.isArray(raw.tracks)) raw = raw.tracks;
+      else if (Array.isArray(raw.songs)) raw = raw.songs;
+      else if (Array.isArray(raw.items)) raw = raw.items;
+    }
+    if (!Array.isArray(raw)) return [];
+
+    const norm = (t, i) => {
+      if (!t || typeof t !== "object") return null;
+
+      const id = String(t.slug || t.id || `track-${i + 1}`).trim();
+      const title = (t.title || t.name || `Faixa ${i + 1}`).toString().trim();
+      const artist = (t.artist || t.author || (t.meta && t.meta.artist) || "").toString();
+      const year = (t.year || (t.meta && t.meta.year) || "")?.toString() || "";
+
+      const cover = toRel(
+        (t.cover) ||
+        (t.assets && (t.assets.coverImage || t.assets.cover)) ||
+        "./assets/img/hero.png"
+      );
+
+      const previewAudio = toRel(
+        (t.preview) ||
+        (t.previewSrc) ||
+        (t.assets && t.assets.preview && (t.assets.preview.file || t.assets.preview.src)) ||
+        t.audio || t.src || `./assets/audio/${id}.mp3`
+      );
+
+      const adAudio = toRel(
+        (t.audioDescription) ||
+        (t.adSrc) ||
+        (t.assets && t.assets.audioDescription && (t.assets.audioDescription.file || t.assets.audioDescription.src)) ||
+        ""
+      );
+
+      const letraHtml = t.letraHtml || t.lyricsHtml || null;
+      const letra = t.lyrics || t.letra || null;
+      const sobreHtml = t.sobreHtml || t.aboutHtml || null;
+      const sobre = t.sobre || t.about || null;
+      const analiseHtml = t.analiseHtml || t.analysisHtml || null;
+      const analise = t.analise || t.analysis || null;
+
+      const fontesArr = Array.isArray(t.fontes) ? t.fontes : (Array.isArray(t.sources) ? t.sources : []);
+      const fontes = (fontesArr || []).map((s) => {
+        if (!s) return null;
+        if (typeof s === "string") return { label: s, url: s };
+        if (typeof s === "object") {
+          return { label: s.label || s.title || s.url || s.href || "Fonte", url: s.url || s.href || "#" };
+        }
+        return null;
+      }).filter(Boolean);
+
+      return {
+        id, title, artist, year, cover,
+        previewAudio, adAudio,
+        letraHtml, letra, sobreHtml, sobre, analiseHtml, analise, fontes,
+        meta: [artist, year && String(year)].filter(Boolean).join(" • "),
+      };
+    };
+
+    return raw.map(norm).filter(Boolean).filter((x) => x.title && x.id);
+  }
+
+  function useTracks() {
+    const [tracks, setTracks] = useState([]);
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      (async () => { setTracks(await loadAllSongs()); setLoading(false); })();
+    }, []);
+    return { tracks, loading };
+  }
+
+  function useTrackById(slug) {
+    const [state, setState] = useState({ loading: true, item: null });
+    useEffect(() => {
+      let alive = true;
+      (async () => {
+        const list = await loadAllSongs();
+        const found = list.find((x) => x.id.toLowerCase() === String(slug || "").toLowerCase());
+        if (!alive) return;
+        setState({ loading: false, item: found || null });
+      })();
+      return () => { alive = false; };
+    }, [slug]);
+    return state;
+  }
+
+  /* --------------- UI Bits --------------- */
+  function BackBtn({ onClick }) {
+    return h(
+      "button",
+      { className: "back-button", type: "button", onClick },
+      h("span", { "aria-hidden": "true" }, "← "),
+      "Voltar"
+    );
+  }
+
+  /* --------------- Pages --------------- */
+  function Home({ onGo }) {
+    return h("div", { className: "page fade-in" },
+      h("section", { className: "hero hero-gradient glass-card" },
+        h("div", { className: "hero-content" },
+          h("h1", { className: "hero-title text-gradient" }, "A História Cantada da Aids no Brasil"),
+          h("p", { className: "hero-lede" }, "Descubra músicas temáticas sobre a AIDS no Brasil e suas histórias e análises"),
+          h("div", { className: "hero-badges" },
+            h("span", { className: "badge dot-green" }, "Informações atualizadas"),
+            h("span", { className: "badge dot-blue" }, "Audiodescrição inclusa"),
+            h("span", { className: "badge dot-purple" }, "Exploração interativa")
+          )
+        )
+      ),
+      h("section", { className: "home-cards" },
+        h("div", { className: "cards-2col" },
+          h("article", { className: "choice-card glass-card", role: "button", tabIndex: 0, onClick: () => onGo("apresentacao") },
+            h("div", { className: "choice-icon" }, "📘"),
+            h("h2", { className: "choice-title" }, "Apresentação"),
+            h("p", { className: "choice-desc" }, "Conheça o contexto da mostra e sua importância na luta contra a AIDS"),
+            h("button", { type: "button", className: "btn btn-primary" }, "Explorar")
+          ),
+          h("article", { className: "choice-card glass-card", role: "button", tabIndex: 0, onClick: () => onGo("faixas") },
+            h("div", { className: "choice-icon" }, "🎵"),
+            h("h2", { className: "choice-title" }, "Músicas"),
+            h("p", { className: "choice-desc" }, "Ouça trechos das canções e veja suas análises e transcrições"),
+            h("button", { type: "button", className: "btn btn-green" }, "Explorar")
+          )
+        )
+      )
+    );
+  }
+
+  function Presentation({ onBack, audio }) {
+    const { data, loading } = usePresentation();
+    const hero = toRel((data && data.heroImage) || "./assets/img/hero.png");
+    const text = (data && (data.introHtml || data.intro)) || "Bem-vindo(a) à História Cantada.";
+    const audioSrc = toRel((data && (data.audio || data.audioSrc)) || "./assets/audio/presentation.mp3");
+    const isActive = audio.id === "presentation";
+    const btnLabel = isActive ? (audio.playing ? "Pausar" : "Retomar") : "Ouvir";
+
+    return h("div", { className: "page fade-in" },
+      h("header", { className: "page-header" },
+        h(BackBtn, { onClick: onBack }),
+        h("h1", { className: "page-title text-gradient" }, "Apresentação")
+      ),
+      h("section", { className: "panel glass-card" },
+        h("img", { className: "hero-image", src: hero, alt: "" }),
+        loading
+          ? h("p", null, "Carregando…")
+          : h("div", { className: "copy", dangerouslySetInnerHTML: { __html: text } }),
+        h("div", { className: "actions" },
+          h("button", {
+            className: "btn btn-green",
+            type: "button",
+            onClick: () => audio.toggle("presentation", audioSrc),
+            "aria-pressed": String(isActive && audio.playing),
+          }, `${btnLabel} audiodescrição`)
+        )
+      )
+    );
+  }
+
+  function Tracks({ onBack, audio, onOpenTrack }) {
+    const { tracks, loading } = useTracks();
+    const [q, setQ] = useState("");
+    const filtered = useMemo(() => {
+      const needle = q.trim().toLowerCase();
+      if (!needle) return tracks;
+      return tracks.filter((t) =>
+        [t.title, t.artist, t.meta, ...(t.tags || [])].join(" ").toLowerCase().includes(needle)
+      );
+    }, [q, tracks]);
+
+    return h("div", { className: "page fade-in" },
+      h("header", { className: "page-header" },
+        h(BackBtn, { onClick: onBack }),
+        h("h1", { className: "page-title text-gradient" }, "Músicas"),
+        h("p", { className: "page-subtle" }, "Biblioteca")
+      ),
+      h("section", { className: "toolbar" },
+        h("input", {
+          className: "input search",
+          type: "search",
+          placeholder: "Buscar por artista, música, tema…",
+          value: q,
+          onInput: (e) => setQ(e.target.value),
+        })
+      ),
+      loading
+        ? h("section", { className: "center" }, h("p", null, "Carregando…"))
+        : (filtered.length === 0
+            ? h("section", { className: "center" }, h("p", null, "Nenhuma música encontrada."))
+            : h("section", { className: "cards-grid" },
+                ...filtered.map((t) =>
+                  h("article", {
+                      key: t.id,
+                      className: "music-card glass-card",
+                      onClick: () => onOpenTrack(t.id),
+                      role: "button", tabIndex: 0,
+                    },
+                    h("img", { className: "music-cover", src: t.cover, alt: "" }),
+                    h("div", { className: "music-meta" },
+                      h("h3", { className: "music-title" }, t.title),
+                      h("p", { className: "music-line" }, t.meta)
+                    ),
+                    h("div", { className: "actions" },
+                      h("button", {
+                        type: "button",
+                        className: `btn btn-primary ${audio.id === t.id + ":preview" ? "is-active" : ""}`,
+                        onClick: (ev) => { ev.stopPropagation(); audio.toggle(t.id + ":preview", t.previewAudio); }
+                      }, audio.id === t.id + ":preview" ? (audio.playing ? "⏸️ Pausar" : "▶️ Retomar") : "▶️ Trecho"),
+                      t.adAudio ? h("button", {
+                        type: "button",
+                        className: `btn ${audio.id === t.id + ":ad" ? "btn-green is-active" : "btn-green"}`,
+                        onClick: (ev) => { ev.stopPropagation(); audio.toggle(t.id + ":ad", t.adAudio); }
+                      }, audio.id === t.id + ":ad" ? (audio.playing ? "⏸️ Audiodescrição" : "▶️ Audiodescrição") : "🎵 Audiodescrição") : null
+                    )
+                  )
+                )
+              )
+          )
+    );
+  }
+
+  function Pill({ active, onClick, children }) {
+    return h("button", {
+      type: "button",
+      className: `tag-chip ${active ? "filter-chip-active" : ""}`,
+      onClick,
+    }, children);
+  }
+
+  function TrackDetail({ slug, onBack, audio }) {
+    const { loading, item } = useTrackById(slug);
+    const [tab, setTab] = useState("sobre");            // hooks must be at top
+
+    useEffect(() => () => audio.stopAll(false), [slug]); // stop when leaving
+
+    if (loading) {
+      return h("div", { className: "page center" }, h("p", null, "Carregando…"));
+    }
+    if (!item) {
+      return h("div", { className: "page center" },
+        h(BackBtn, { onClick: onBack }),
+        h("p", null, "Música não encontrada.")
+      );
+    }
+
+    const isPrev = audio.id === (item.id + ":preview");
+    const isAd = audio.id === (item.id + ":ad");
+
+    const TabContent = () => {
+      if (tab === "letra") {
+        if (item.letraHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.letraHtml } });
+        if (item.letra) return h("pre", { className: "copy" }, item.letra);
+        return h("p", { className: "copy" }, "Sem letra disponível.");
+      }
+      if (tab === "sobre") {
+        if (item.sobreHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.sobreHtml } });
+        if (item.sobre) return h("p", { className: "copy" }, item.sobre);
+        return h("p", { className: "copy" }, "Sem conteúdo.");
+      }
+      if (tab === "analise") {
+        if (item.analiseHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.analiseHtml } });
+        if (item.analise) return h("p", { className: "copy" }, item.analise);
+        return h("p", { className: "copy" }, "Sem conteúdo.");
+      }
+      if (tab === "fontes") {
+        if (!item.fontes || !item.fontes.length) return h("p", { className: "copy" }, "Sem fontes.");
+        return h("ul", { className: "copy" },
+          ...item.fontes.map((s, i) =>
+            h("li", { key: i },
+              h("a", { href: s.url || s.href || "#", target: "_blank", rel: "noopener noreferrer" }, s.label || s.title || s.url || "Fonte")
+            )
+          )
+        );
+      }
+      return null;
+    };
+
+    return h("div", { className: "page fade-in" },
+      h("header", { className: "page-header" },
+        h(BackBtn, { onClick: onBack }),
+        h("h1", { className: "page-title text-gradient" }, `${item.title}`)
+      ),
+      h("section", { className: "panel glass-card", style: { padding: "16px" } },
+        h("img", { className: "hero-image", src: item.cover, alt: "" }),
+        h("div", { style: { padding: "12px 8px 0" } },
+          h("h2", { style: { margin: "6px 0 4px", fontWeight: 800 } }, item.title),
+          h("p", { className: "page-subtle", style: { margin: 0 } }, item.meta),
+          h("div", { className: "actions" },
+            h("button", {
+              type: "button",
+              className: `btn btn-primary ${isPrev ? "is-active" : ""}`,
+              onClick: () => audio.toggle(item.id + ":preview", item.previewAudio),
+            }, isPrev ? (audio.playing ? "⏸️ Trecho" : "▶️ Trecho") : "▶️ Trecho"),
+            item.adAudio ? h("button", {
+              type: "button",
+              className: `btn btn-green ${isAd ? "is-active" : ""}`,
+              onClick: () => audio.toggle(item.id + ":ad", item.adAudio),
+            }, isAd ? (audio.playing ? "⏸️ Audiodescrição" : "▶️ Audiodescrição") : "🎵 Audiodescrição") : null
+          ),
+          h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" } },
+            h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
+            h(Pill, { active: tab === "sobre", onClick: () => setTab("sobre") }, "Sobre"),
+            h(Pill, { active: tab === "analise", onClick: () => setTab("analise") }, "Análise"),
+            h(Pill, { active: tab === "fontes", onClick: () => setTab("fontes") }, "Fontes"),
+          ),
+          h("div", { style: { marginTop: "10px" } }, h(TabContent))
+        )
+      )
+    );
+  }
+
+  /* --------------- App shell --------------- */
+  function App() {
+    const [route, navigate] = useHashRoute(ROUTES.home);
+    const audio = useAudio();
+
+    useEffect(() => { audio.stopAll(false); }, [route]); // stop current when route changes
+
+    const go = (r) => navigate(r);
+    if (route.name === ROUTES.apresentacao) {
+      return h(Presentation, { onBack: () => go(ROUTES.home), audio });
+    }
+    if (route.name === ROUTES.faixas) {
+      return h(Tracks, {
+        onBack: () => go(ROUTES.home),
+        audio,
+        onOpenTrack: (id) => navigate(`faixas/${id}`),
+      });
+    }
+    if (route.name === "faixas-detail") {
+      return h(TrackDetail, { slug: route.slug, onBack: () => go(ROUTES.faixas), audio });
+    }
+    return h(Home, { onGo: (name) => navigate(name) });
+  }
+
+  const root = document.getElementById("root");
+  ReactDOM.createRoot(root).render(h(App));
+})();

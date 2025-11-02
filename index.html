@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>História Cantada</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles (cache-busted) -->
+  <link rel="stylesheet" href="./assets/css/theme.css?v=20251028-1" />
+  <link rel="stylesheet" href="./assets/css/app.css?v=20251028-1" />
+  <link rel="stylesheet" href="./assets/css/books-detail.css?v=20251028-1" />
+
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#0b1220" />
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Vendor -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/howler/dist/howler.min.js" crossorigin></script>
+
+  <!-- App -->
+  <script src="./app.js?v=20251028-1"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js?v=20251028-1').catch(()=>{});
+      });
+    }
+  </script>
+</body>
+</html>

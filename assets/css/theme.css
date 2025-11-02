@@ -1,0 +1,136 @@
+/* Global theme: dark, glass, gradients – matches historia-cantada.bebot.co feel */
+:root{
+  --bg: #0b1220;
+  --bg-2: #0e1526;
+  --text: #e9eef7;
+  --muted: #a7b0c0;
+  --panel: rgba(255,255,255,0.04);
+  --panel-strong: rgba(255,255,255,0.06);
+  --border: rgba(255,255,255,0.08);
+  --glow: 0 10px 30px rgba(0,0,0,0.35);
+  --primary: #3a86ff;
+  --primary-2: #5dd1ff;
+  --green: #1fbf75;
+  --purple: #7d5cff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html,body{
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(62,103,169,0.20), transparent 60%),
+              linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+  color: var(--text);
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page{max-width:1120px;margin:48px auto;padding:0 24px}
+.fade-in{animation:fade .25s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.glass-card{
+  background: linear-gradient(180deg, var(--panel) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--glow);
+}
+
+/* HERO (top of /#home) */
+.hero{padding:28px;border-radius:16px;margin-bottom:16px}
+.hero-gradient{
+  background:
+    radial-gradient(1000px 400px at 20% -10%, rgba(93,209,255,0.10), transparent 60%),
+    radial-gradient(1000px 400px at 80% -10%, rgba(125,92,255,0.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.02) 100%);
+  border:1px solid var(--border);
+}
+.hero-content{max-width:980px}
+.hero-title{
+  font-weight:800;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height:1.05;
+  margin:0 0 12px;
+}
+.text-gradient{
+  background: linear-gradient(90deg, #7cc0ff, #dce9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-lede{margin:0 0 12px;color:var(--muted);font-size:17px}
+.hero-badges{display:flex;gap:16px;flex-wrap:wrap}
+.badge{
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  color:#cfe3ff;
+  padding:6px 10px;border-radius:999px;font-size:12px
+}
+.badge::before{
+  content:'•'; margin-right:6px;opacity:.9
+}
+.badge.dot-green::before{color:var(--green)}
+.badge.dot-blue::before{color:var(--primary-2)}
+.badge.dot-purple::before{color:var(--purple)}
+
+/* HOME choice cards (2-up grid) */
+.home-cards{margin-top:28px}
+.cards-2col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:900px){ .cards-2col{grid-template-columns:1fr} }
+
+.choice-card{padding:24px;display:flex;flex-direction:column;gap:8px;cursor:pointer}
+.choice-card:hover{outline:1px solid rgba(125,92,255,.35); background:var(--panel-strong)}
+.choice-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  background: rgba(99,138,255,.18); border:1px solid var(--border); font-size:22px}
+.choice-title{margin:2px 0 0;font-weight:700;font-size:22px}
+.choice-desc{margin:2px 0 10px;color:var(--muted)}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border-radius:10px;border:1px solid var(--border);padding:10px 14px;
+  background:rgba(255,255,255,0.03);color:var(--text);cursor:pointer;
+  transition:transform .05s ease, background .15s ease, border-color .15s ease;
+  font-weight:600
+}
+.btn:hover{transform:translateY(-1px); background:rgba(255,255,255,0.05)}
+.btn-primary{background:linear-gradient(180deg, rgba(58,134,255,.28), rgba(58,134,255,.18));
+  border-color:rgba(58,134,255,.35)}
+.btn-green{background:linear-gradient(180deg, rgba(31,191,117,.28), rgba(31,191,117,.18));
+  border-color:rgba(31,191,117,.35)}
+
+/* Page headers / panels */
+.page-header{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.page-title{font-size:28px;font-weight:800;margin:0}
+.page-subtle{margin:0;color:var(--muted)}
+.panel{padding:20px; border-radius:16px; border:1px solid var(--border); background:var(--panel);}
+
+/* Toolbar + input */
+.toolbar{margin:12px 0 16px}
+.input{
+  width:100%; padding:12px 14px; background:rgba(255,255,255,.04);
+  border:1px solid var(--border); border-radius:12px; color:var(--text);
+}
+.input::placeholder{color:#8ea4c0}
+
+/* Grid of music cards (Faixas) */
+.cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1100px){ .cards-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:720px){ .cards-grid{grid-template-columns:1fr} }
+
+.music-card{padding:14px}
+.music-cover{width:100%; height:180px; object-fit:cover; border-radius:12px; border:1px solid var(--border); background:#111;}
+.music-meta{margin-top:10px}
+.music-title{margin:0 0 4px; font-weight:700}
+.music-line{margin:0; color:var(--muted)}
+.tags{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 6px}
+.tag-chip{border:1px solid var(--border); background:rgba(255,255,255,.04); padding:6px 10px; border-radius:999px; font-size:12px}
+
+.actions{display:flex; gap:10px; margin-top:12px}
+.back-button{background:rgba(255,255,255,.04); border:1px solid var(--border); color:var(--text);
+  padding:8px 10px; border-radius:10px; cursor:pointer}
+.back-button:hover{background:rgba(255,255,255,.07)}
+.hero-image{width:100%; max-height:340px; object-fit:cover; border-radius:12px; border:1px solid var(--border)}
+.copy{color:#cfe3ff; line-height:1.6}
+.center{display:grid; place-items:center; padding:40px 0}

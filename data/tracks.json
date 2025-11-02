@@ -1,0 +1,10 @@
+[
+  {
+    "id": "faixa-1",
+    "title": "Faixa de Exemplo",
+    "artist": "Artista",
+    "audio": "./assets/audio/track1.mp3",
+    "cover": "./assets/img/icon-192.png",
+    "duration": "1:23"
+  }
+]

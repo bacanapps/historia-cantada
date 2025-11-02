@@ -1,0 +1,6 @@
+# historia-cantada
+
+lsof -i :8004
+kill 
+
+cd /Users/cpantin/Library/CloudStorage/GoogleDrive-colin@cpantin.com/My\ Drive/@Ministério\ da\ Saúde/OPAS\ 2026/40\ anos\ da\ aids/historia-cantada && python3 -m http.server 8004
