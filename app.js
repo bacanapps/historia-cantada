@@ -272,69 +272,99 @@
   }
 
   /* --------------- Pages --------------- */
-  function Home({ onGo }) {
-    return h("div", { className: "page fade-in" },
-      h("section", { className: "hero hero-gradient glass-card" },
+function Home({ onGo, theme, toggleTheme }) {
+  return h("div", { className: "page fade-in" },
+    h("button", {
+      className: "theme-toggle-btn",
+      onClick: toggleTheme,
+      "aria-label": "Alternar tema visual"
+    }, theme === 'dark' ? '☀️' : '🌙'),
+
+    h("section", { className: "hero hero-gradient glass-card" },
+      h("div", { className: "hero-header" },
         h("div", { className: "hero-content" },
-          h("h1", { className: "hero-title text-gradient" }, "A História Cantada da Aids no Brasil"),
-          h("p", { className: "hero-lede" }, "Descubra músicas temáticas sobre a AIDS no Brasil e suas histórias e análises"),
-          h("div", { className: "hero-badges" },
-            h("span", { className: "badge dot-green" }, "Informações atualizadas"),
-            h("span", { className: "badge dot-blue" }, "Audiodescrição inclusa"),
-            h("span", { className: "badge dot-purple" }, "Exploração interativa")
-          )
-        )
-      ),
-      h("section", { className: "home-cards" },
-        h("div", { className: "cards-2col" },
-          h("article", { className: "choice-card glass-card", role: "button", tabIndex: 0, onClick: () => onGo("apresentacao") },
-            h("div", { className: "choice-icon" }, "📘"),
-            h("h2", { className: "choice-title" }, "Apresentação"),
-            h("p", { className: "choice-desc" }, "Conheça o contexto da mostra e sua importância na luta contra a AIDS"),
-            h("button", { type: "button", className: "btn btn-primary" }, "Explorar")
-          ),
-          h("article", { className: "choice-card glass-card", role: "button", tabIndex: 0, onClick: () => onGo("faixas") },
-            h("div", { className: "choice-icon" }, "🎵"),
-            h("h2", { className: "choice-title" }, "Músicas"),
-            h("p", { className: "choice-desc" }, "Ouça trechos das canções e veja suas análises e transcrições"),
-            h("button", { type: "button", className: "btn btn-green" }, "Explorar")
+          h("h1", { className: "hero-title" }, "A História Cantada da Aids no Brasil"),
+          h("p", { className: "hero-lede" },
+            "Descubra músicas temáticas sobre a AIDS no Brasil e suas histórias e análises"
           )
         )
       )
-    );
-  }
+    ),
 
-  function Presentation({ onBack, audio }) {
+    h("section", { className: "home-cards" },
+      h("div", { className: "cards-2col" },
+
+        h("article", {
+          className: "choice-card glass-card",
+          role: "button",
+          tabIndex: 0,
+          onClick: () => onGo("apresentacao")
+        },
+          h("div", { className: "choice-icon" }, "📘"),
+          h("h2", { className: "choice-title" }, "Apresentação"),
+          h("p", { className: "choice-desc" },
+            "Conheça o contexto da mostra e sua importância na luta contra a AIDS"
+          ),
+          h("button", { type: "button", className: "btn btn-primary" }, "Explorar")
+        ),
+
+        h("article", {
+          className: "choice-card glass-card",
+          role: "button",
+          tabIndex: 0,
+          onClick: () => onGo("faixas")
+        },
+          h("div", { className: "choice-icon" }, "🎵"),
+          h("h2", { className: "choice-title" }, "Músicas"),
+          h("p", { className: "choice-desc" },
+            "Ouça trechos das canções e veja suas análises e transcrições"
+          ),
+          h("button", { type: "button", className: "btn btn-green" }, "Explorar")
+        )
+      )
+    )
+  );
+}
+
+  function Presentation({ onBack, audio, theme, toggleTheme }) {
     const { data, loading } = usePresentation();
     const hero = toRel((data && data.heroImage) || "./assets/img/hero.png");
     const text = (data && (data.introHtml || data.intro)) || "Bem-vindo(a) à História Cantada.";
     const audioSrc = toRel((data && (data.audio || data.audioSrc)) || "./assets/audio/presentation.mp3");
     const isActive = audio.id === "presentation";
-    const btnLabel = isActive ? (audio.playing ? "Pausar" : "Retomar") : "Ouvir";
+    const btnLabel = isActive && audio.playing ? "⏸️ Pausar" : "▶️ Audiodescrição";
 
     return h("div", { className: "page fade-in" },
       h("header", { className: "page-header" },
         h(BackBtn, { onClick: onBack }),
-        h("h1", { className: "page-title text-gradient" }, "Apresentação")
+        h("div", { className: "page-header-content" },
+          h("h1", { className: "page-title" }, "Apresentação"),
+          h("p", { className: "page-subtle" }, "A História Cantada")
+        ),
+        h("button", {
+          className: "theme-toggle-btn",
+          onClick: toggleTheme,
+          "aria-label": "Alternar tema visual"
+        }, theme === 'dark' ? '☀️' : '🌙')
       ),
       h("section", { className: "panel glass-card" },
-        h("img", { className: "hero-image", src: hero, alt: "" }),
+        h("img", { className: "hero-image", src: hero, alt: "A História Cantada" }),
         loading
           ? h("p", null, "Carregando…")
           : h("div", { className: "copy", dangerouslySetInnerHTML: { __html: text } }),
-        h("div", { className: "actions" },
+        h("div", { className: "actions", style: { marginTop: "16px" } },
           h("button", {
-            className: "btn btn-green",
+            className: "btn btn-primary",
             type: "button",
             onClick: () => audio.toggle("presentation", audioSrc),
             "aria-pressed": String(isActive && audio.playing),
-          }, `${btnLabel} audiodescrição`)
+          }, btnLabel)
         )
       )
     );
   }
 
-  function Tracks({ onBack, audio, onOpenTrack }) {
+  function Tracks({ onBack, audio, onOpenTrack, theme, toggleTheme }) {
     const { tracks, loading } = useTracks();
     const [q, setQ] = useState("");
     const filtered = useMemo(() => {
@@ -348,8 +378,15 @@
     return h("div", { className: "page fade-in" },
       h("header", { className: "page-header" },
         h(BackBtn, { onClick: onBack }),
-        h("h1", { className: "page-title text-gradient" }, "Músicas"),
-        h("p", { className: "page-subtle" }, "Biblioteca")
+        h("div", { className: "page-header-content" },
+          h("h1", { className: "page-title" }, "Músicas"),
+          h("p", { className: "page-subtle" }, "Biblioteca")
+        ),
+        h("button", {
+          className: "theme-toggle-btn",
+          onClick: toggleTheme,
+          "aria-label": "Alternar tema visual"
+        }, theme === 'dark' ? '☀️' : '🌙')
       ),
       h("section", { className: "toolbar" },
         h("input", {
@@ -404,7 +441,7 @@
     }, children);
   }
 
-  function TrackDetail({ slug, onBack, audio }) {
+  function TrackDetail({ slug, onBack, audio, theme, toggleTheme }) {
     const { loading, item } = useTrackById(slug);
     const [tab, setTab] = useState("sobre");            // hooks must be at top
 
@@ -455,7 +492,12 @@
     return h("div", { className: "page fade-in" },
       h("header", { className: "page-header" },
         h(BackBtn, { onClick: onBack }),
-        h("h1", { className: "page-title text-gradient" }, `${item.title}`)
+        h("h1", { className: "page-title" }, `${item.title}`),
+        h("button", {
+          className: "theme-toggle-btn",
+          onClick: toggleTheme,
+          "aria-label": "Alternar tema visual"
+        }, theme === 'dark' ? '☀️' : '🌙')
       ),
       h("section", { className: "panel glass-card", style: { padding: "16px" } },
         h("img", { className: "hero-image", src: item.cover, alt: "" }),
@@ -486,28 +528,64 @@
     );
   }
 
+  /* --------------- Theme Management --------------- */
+  function useTheme() {
+    const [theme, setTheme] = useState(() => {
+      // Check URL parameter first
+      const urlParams = new URLSearchParams(window.location.search);
+      const themeParam = urlParams.get('theme');
+      if (themeParam === 'light' || themeParam === 'dark') {
+        return themeParam;
+      }
+      // Then check localStorage
+      const saved = localStorage.getItem('historia-cantada-theme');
+      return saved === 'dark' ? 'dark' : 'light'; // Default to light
+    });
+
+    const toggleTheme = useCallback(() => {
+      setTheme(current => {
+        const next = current === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('historia-cantada-theme', next);
+        document.documentElement.setAttribute('data-theme', next);
+        // Update URL parameter
+        const url = new URL(window.location);
+        url.searchParams.set('theme', next);
+        window.history.pushState({}, '', url);
+        return next;
+      });
+    }, []);
+
+    useEffect(() => {
+      document.documentElement.setAttribute('data-theme', theme);
+    }, [theme]);
+
+    return { theme, toggleTheme };
+  }
+
   /* --------------- App shell --------------- */
   function App() {
     const [route, navigate] = useHashRoute(ROUTES.home);
     const audio = useAudio();
+    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => { audio.stopAll(false); }, [route]); // stop current when route changes
 
     const go = (r) => navigate(r);
     if (route.name === ROUTES.apresentacao) {
-      return h(Presentation, { onBack: () => go(ROUTES.home), audio });
+      return h(Presentation, { onBack: () => go(ROUTES.home), audio, theme, toggleTheme });
     }
     if (route.name === ROUTES.faixas) {
       return h(Tracks, {
         onBack: () => go(ROUTES.home),
         audio,
         onOpenTrack: (id) => navigate(`faixas/${id}`),
+        theme, toggleTheme
       });
     }
     if (route.name === "faixas-detail") {
-      return h(TrackDetail, { slug: route.slug, onBack: () => go(ROUTES.faixas), audio });
+      return h(TrackDetail, { slug: route.slug, onBack: () => go(ROUTES.faixas), audio, theme, toggleTheme });
     }
-    return h(Home, { onGo: (name) => navigate(name) });
+    return h(Home, { onGo: (name) => navigate(name), theme, toggleTheme });
   }
 
   const root = document.getElementById("root");
