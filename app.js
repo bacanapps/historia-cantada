@@ -436,7 +436,7 @@ function Home({ onGo, theme, toggleTheme }) {
   function Pill({ active, onClick, children }) {
     return h("button", {
       type: "button",
-      className: `tag-chip ${active ? "filter-chip-active" : ""}`,
+      className: `tag-chip ${active ? "filter-chip-active btn btn-green" : ""}`,
       onClick,
     }, children);
   }
@@ -517,8 +517,8 @@ function Home({ onGo, theme, toggleTheme }) {
             }, isAd ? (audio.playing ? "⏸️ Audiodescrição" : "▶️ Audiodescrição") : "🎵 Audiodescrição") : null
           ),
           h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" } },
-            h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
             h(Pill, { active: tab === "sobre", onClick: () => setTab("sobre") }, "Sobre"),
+            h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
             h(Pill, { active: tab === "referencia", onClick: () => setTab("referencia") }, "Referência"),
             h(Pill, { active: tab === "fontes", onClick: () => setTab("fontes") }, "Fontes"),
           ),
