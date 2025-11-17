@@ -436,7 +436,8 @@ function Home({ onGo, theme, toggleTheme }) {
   function Pill({ active, onClick, children }) {
     return h("button", {
       type: "button",
-      className: `tag-chip ${active ? "filter-chip-active btn btn-green" : ""}`,
+      className: `tag-chip ${active ? "filter-chip-active" : ""}`,
+      style: active ? { backgroundColor: "var(--color-brand-accent)", color: "white" } : {},
       onClick,
     }, children);
   }
