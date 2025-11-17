@@ -209,12 +209,12 @@
         ""
       );
 
-      const letraHtml = t.letraHtml || t.lyricsHtml || null;
-      const letra = t.lyrics || t.letra || null;
-      const sobreHtml = t.sobreHtml || t.aboutHtml || null;
-      const sobre = t.sobre || t.about || null;
-      const analiseHtml = t.analiseHtml || t.analysisHtml || null;
-      const analise = t.analise || t.analysis || null;
+      const transcriptHtml = t.transcriptHtml || t.letraHtml || t.lyricsHtml || null;
+      const transcript = t.transcript || t.lyrics || t.letra || null;
+      const synopsisHtml = t.synopsisHtml || t.sobreHtml || t.aboutHtml || null;
+      const synopsis = t.synopsis || t.sobre || t.about || null;
+      const referenciaHtml = t.referenciaHtml || t.analiseHtml || t.analysisHtml || null;
+      const referencia = t.referencia || t.analise || t.analysis || null;
 
       const fontesArr = Array.isArray(t.fontes) ? t.fontes : (Array.isArray(t.sources) ? t.sources : []);
       const fontes = (fontesArr || []).map((s) => {
@@ -229,7 +229,7 @@
       return {
         id, title, artist, year, cover,
         previewAudio, adAudio,
-        letraHtml, letra, sobreHtml, sobre, analiseHtml, analise, fontes,
+        transcriptHtml, transcript, synopsisHtml, synopsis, referenciaHtml, referencia, fontes,
         meta: [artist, year && String(year)].filter(Boolean).join(" • "),
       };
     };
@@ -462,18 +462,18 @@ function Home({ onGo, theme, toggleTheme }) {
 
     const TabContent = () => {
       if (tab === "letra") {
-        if (item.letraHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.letraHtml } });
-        if (item.letra) return h("pre", { className: "copy" }, item.letra);
+        if (item.transcriptHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.transcriptHtml } });
+        if (item.transcript) return h("pre", { className: "copy" }, item.transcript);
         return h("p", { className: "copy" }, "Sem letra disponível.");
       }
       if (tab === "sobre") {
-        if (item.sobreHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.sobreHtml } });
-        if (item.sobre) return h("p", { className: "copy" }, item.sobre);
+        if (item.synopsisHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.synopsisHtml } });
+        if (item.synopsis) return h("p", { className: "copy" }, item.synopsis);
         return h("p", { className: "copy" }, "Sem conteúdo.");
       }
-      if (tab === "analise") {
-        if (item.analiseHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.analiseHtml } });
-        if (item.analise) return h("p", { className: "copy" }, item.analise);
+      if (tab === "referencia") {
+        if (item.referenciaHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.referenciaHtml } });
+        if (item.referencia) return h("p", { className: "copy" }, item.referencia);
         return h("p", { className: "copy" }, "Sem conteúdo.");
       }
       if (tab === "fontes") {
@@ -519,7 +519,7 @@ function Home({ onGo, theme, toggleTheme }) {
           h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" } },
             h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
             h(Pill, { active: tab === "sobre", onClick: () => setTab("sobre") }, "Sobre"),
-            h(Pill, { active: tab === "analise", onClick: () => setTab("analise") }, "Análise"),
+            h(Pill, { active: tab === "referencia", onClick: () => setTab("referencia") }, "Referência"),
             h(Pill, { active: tab === "fontes", onClick: () => setTab("fontes") }, "Fontes"),
           ),
           h("div", { style: { marginTop: "10px" } }, h(TabContent))
