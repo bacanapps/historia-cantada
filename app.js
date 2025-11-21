@@ -352,9 +352,9 @@ function Home({ onGo, theme, toggleTheme }) {
         loading
           ? h("p", null, "Carregando…")
           : h("div", { className: "copy", dangerouslySetInnerHTML: { __html: text } }),
-        h("div", { className: "actions", style: { marginTop: "16px" } },
+        h("div", { className: "audio-row" },
           h("button", {
-            className: "btn btn-primary",
+            className: "audio-btn",
             type: "button",
             onClick: () => audio.toggle("presentation", audioSrc),
             "aria-pressed": String(isActive && audio.playing),
@@ -389,13 +389,20 @@ function Home({ onGo, theme, toggleTheme }) {
         }, theme === 'dark' ? '☀️' : '🌙')
       ),
       h("section", { className: "toolbar" },
-        h("input", {
-          className: "input search",
-          type: "search",
-          placeholder: "Buscar por artista, música, tema…",
-          value: q,
-          onInput: (e) => setQ(e.target.value),
-        })
+        h("div", { className: "search-input-wrapper" },
+          h("input", {
+            className: "input search",
+            type: "search",
+            placeholder: "Buscar por artista, música, tema…",
+            value: q,
+            onInput: (e) => setQ(e.target.value),
+          }),
+          q && h("button", {
+            className: "search-clear-btn",
+            onClick: () => setQ(""),
+            "aria-label": "Limpar busca"
+          }, "✕")
+        )
       ),
       loading
         ? h("section", { className: "center" }, h("p", null, "Carregando…"))
