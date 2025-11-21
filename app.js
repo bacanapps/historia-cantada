@@ -322,6 +322,10 @@ function Home({ onGo, theme, toggleTheme }) {
           h("button", { type: "button", className: "btn btn-green" }, "Explorar")
         )
       )
+    ),
+
+    h("div", { className: "app-footer-line" },
+      "© 2025 Dezembro Vermelho • Ministério da Saúde"
     )
   );
 }
@@ -442,7 +446,11 @@ function Home({ onGo, theme, toggleTheme }) {
                   )
                 )
               )
-          )
+          ),
+
+      h("div", { className: "app-footer-line" },
+        "© 2025 Dezembro Vermelho • Ministério da Saúde"
+      )
     );
   }
 
@@ -538,6 +546,10 @@ function Home({ onGo, theme, toggleTheme }) {
           ),
           h("div", { style: { marginTop: "10px" } }, h(TabContent))
         )
+      ),
+
+      h("div", { className: "app-footer-line" },
+        "© 2025 Dezembro Vermelho • Ministério da Saúde"
       )
     );
   }
