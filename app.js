@@ -348,7 +348,9 @@ function Home({ onGo, theme, toggleTheme }) {
         }, theme === 'dark' ? '☀️' : '🌙')
       ),
       h("section", { className: "panel glass-card" },
-        h("img", { className: "hero-image", src: hero, alt: "A História Cantada" }),
+        h("div", { className: "presentation-heroimg-wrapper" },
+          h("img", { className: "hero-image", src: hero, alt: "A História Cantada" })
+        ),
         loading
           ? h("p", null, "Carregando…")
           : h("div", { className: "copy", dangerouslySetInnerHTML: { __html: text } }),
