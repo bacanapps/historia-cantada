@@ -465,7 +465,7 @@ p.page-subtle {
 
 .presentation-heroimg-wrapper img,
 .hero-image {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
