@@ -5,7 +5,7 @@
     "src": "/assets/audio/presentation.mp3",
     "durationSec": 2
   },
-  "heroImage": "/assets/covers/cover1.png",
+  "heroImage": "/assets/img/logo_aids_40anos.png",
   "credits": [
     { "role": "Curadoria", "name": "Nome do Curador" }
   ],

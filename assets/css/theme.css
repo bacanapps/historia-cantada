@@ -449,7 +449,30 @@ p.page-subtle {
 :root[data-theme="light"] .back-button:hover {
   background: rgba(255, 255, 255, 1);
 }
-.hero-image{width:400px; height:400px; object-fit:cover; border-radius:12px; border:1px solid var(--border); margin:0 auto; display:block}
+.presentation-heroimg-wrapper {
+  background-color: #ff0000;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  aspect-ratio: 16/6;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.presentation-heroimg-wrapper img,
+.hero-image {
+  max-width: 600px;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  display: block;
+}
 .copy{color:var(--text); line-height:1.6}
 .center{display:grid; place-items:center; padding:40px 0}
 
