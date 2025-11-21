@@ -450,7 +450,7 @@ p.page-subtle {
   background: rgba(255, 255, 255, 1);
 }
 .presentation-heroimg-wrapper {
-  background-color: #ff0000;
+  background-color: #E31E24;
   border-radius: 0.75rem;
   border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
