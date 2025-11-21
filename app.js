@@ -392,7 +392,7 @@ function Home({ onGo, theme, toggleTheme }) {
         h("div", { className: "search-input-wrapper" },
           h("input", {
             className: "input search",
-            type: "search",
+            type: "text",
             placeholder: "Buscar por artista, música, tema…",
             value: q,
             onInput: (e) => setQ(e.target.value),
