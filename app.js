@@ -362,6 +362,10 @@ function Home({ onGo, theme, toggleTheme }) {
             "aria-pressed": String(isActive && audio.playing),
           }, btnLabel)
         )
+      ),
+
+      h("div", { className: "app-footer-line" },
+        "© 2025 Dezembro Vermelho • Ministério da Saúde"
       )
     );
   }

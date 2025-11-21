@@ -523,3 +523,13 @@ html[data-theme] {
 .dot-green  { background-color: #10b981; }
 .dot-blue   { background-color: #ff0000; }
 .dot-purple { background-color: #8b5cf6; }
+
+/* Footer */
+.app-footer-line {
+  border-top: 1px solid var(--color-border-card);
+  padding: 1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+}
