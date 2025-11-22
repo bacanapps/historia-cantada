@@ -24,21 +24,22 @@
     return s;
   };
 
-  // Convert YouTube watch URL to embed URL
+  // Convert YouTube watch URL to embed URL with loop and no related videos
   const getYouTubeEmbedUrl = (url) => {
     if (!url) return null;
     try {
       const urlObj = new URL(url);
+      let videoId = null;
+
       if (urlObj.hostname.includes('youtube.com')) {
-        const videoId = urlObj.searchParams.get('v');
-        if (videoId) {
-          return `https://www.youtube.com/embed/${videoId}`;
-        }
+        videoId = urlObj.searchParams.get('v');
       } else if (urlObj.hostname === 'youtu.be') {
-        const videoId = urlObj.pathname.slice(1);
-        if (videoId) {
-          return `https://www.youtube.com/embed/${videoId}`;
-        }
+        videoId = urlObj.pathname.slice(1);
+      }
+
+      if (videoId) {
+        // Parameters: loop=1, playlist=videoId (required for loop), rel=0 (no related videos)
+        return `https://www.youtube.com/embed/${videoId}?loop=1&playlist=${videoId}&rel=0`;
       }
     } catch (e) {
       return null;

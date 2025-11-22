@@ -10,9 +10,9 @@ Este aplicativo apresenta uma coleção de músicas brasileiras que abordam o te
 
 - **Progressive Web App (PWA)** - Funciona offline e pode ser instalado como app nativo
 - **Biblioteca Musical** - Coleção de músicas temáticas sobre HIV/AIDS
-- **Audiodescrição** - Trechos de áudio e audiodescrição para cada música
+- **YouTube Video Embeds** - Vídeos incorporados com reprodução em loop e sem vídeos relacionados
 - **Sistema de Temas** - Suporte para temas claro e escuro com persistência
-- **Conteúdo Rico** - Para cada música: sinopse, letra, referências e fontes
+- **Conteúdo Rico** - Para cada música: sinopse, vídeo, letra, referências e fontes
 - **Design Responsivo** - Interface adaptável para mobile e desktop
 - **Busca Integrada** - Pesquisa por artista, música, tema ou tags
 - **Hash Routing** - Navegação client-side sem recarregamento de página
@@ -84,7 +84,7 @@ Cada música em `data/songs.json` contém:
   "year": 1983,
   "genres": ["rock", "pop"],
   "cover": "/assets/covers/song1.jpeg",
-  "preview": { "src": "url_preview", "durationSec": 240 },
+  "preview": { "src": "https://www.youtube.com/watch?v=VIDEO_ID", "durationSec": 240 },
   "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
   "synopsisHtml": "<p>Contexto histórico e análise...</p>",
   "transcriptHtml": "<p>Letra da música...</p>",
@@ -96,6 +96,7 @@ Cada música em `data/songs.json` contém:
 
 ### Campos de Conteúdo
 
+- **preview.src** - URL do YouTube (convertida automaticamente para embed com loop e sem vídeos relacionados)
 - **synopsisHtml** - Contexto histórico e análise cultural (tab "Sobre")
 - **transcriptHtml** - Letra completa da música (tab "Letra")
 - **analysisHtml** / **referenciaHtml** - Referências bibliográficas (tab "Referência")
@@ -124,12 +125,14 @@ Edite as variáveis CSS em `assets/css/theme.css`:
 
 ## 🔧 Funcionalidades Principais
 
-### Sistema de Áudio
+### Sistema de Vídeo YouTube
 
-- **Instância Única**: Apenas um áudio toca por vez (preview ou audiodescrição)
-- **Controle Global**: Estado de áudio sincronizado em toda a aplicação
-- **Auto-Stop**: Áudio para automaticamente ao navegar entre páginas
-- **Play/Pause**: Controles intuitivos com feedback visual
+- **Embed Responsivo**: Vídeos em iframe com aspect ratio 16:9
+- **Loop Automático**: Vídeos reproduzem em loop contínuo (`loop=1&playlist=videoId`)
+- **Sem Vídeos Relacionados**: Parâmetro `rel=0` previne sugestões de outros canais
+- **Conversão Automática**: URLs do YouTube convertidas para formato embed
+- **Suporte a Formatos**: `youtube.com/watch?v=ID` e `youtu.be/ID`
+- **Graceful Fallback**: Mensagem amigável quando vídeo não está disponível
 
 ### Navegação
 
@@ -139,14 +142,17 @@ Edite as variáveis CSS em `assets/css/theme.css`:
 
 ### Tabs de Conteúdo
 
-Cada música tem 4 tabs organizadas:
+Cada música tem até 5 tabs organizadas:
 
-1. **Sobre** - Sinopse e contexto histórico (padrão)
-2. **Letra** - Transcrição completa da letra
-3. **Referência** - Citações e referências bibliográficas
-4. **Fontes** - Links para recursos externos
+1. **Sobre** - Sinopse e contexto histórico
+2. **Vídeo** - YouTube embed com loop (apenas se disponível)
+3. **Letra** - Transcrição completa da letra
+4. **Referência** - Citações e referências bibliográficas
+5. **Fontes** - Links para recursos externos
 
 **Visual Feedback**: Tab selecionada destacada com fundo verde (`--color-brand-accent`)
+
+**Comportamento Padrão**: Ao abrir uma música, a tab "Vídeo" é exibida por padrão (quando disponível)
 
 ### Hero Images
 
@@ -156,6 +162,33 @@ Cada música tem 4 tabs organizadas:
 - **Border**: Borda sutil com border-radius de 12px
 
 ## 🔄 Atualizações Recentes
+
+### v2.0.0 - YouTube Video Integration (2025-11-22)
+
+**Video Embed System**:
+- Adicionado suporte completo para vídeos do YouTube (app.js:28-48)
+- Conversão automática de URLs para formato embed com parâmetros otimizados
+- Loop automático (`loop=1&playlist=videoId`) para reprodução contínua
+- Remoção de vídeos relacionados (`rel=0`) para experiência focada
+- Iframe responsivo com aspect ratio 16:9 (app.js:532-562)
+
+**UI Improvements**:
+- Nova tab "Vídeo" como segunda opção (após "Sobre")
+- Botões "Trecho" renomeados para "Vídeo" na lista de músicas
+- Remoção completa dos botões "Audiodescrição"
+- Tab "Vídeo" como padrão ao abrir músicas (app.js:509)
+- Hero images centralizadas horizontalmente (theme.css:476-478)
+
+**Data Structure**:
+- Campo `videoUrl` extraído automaticamente do `preview.src`
+- Suporte para URLs nos formatos `youtube.com/watch?v=` e `youtu.be/`
+- Detecção inteligente: URLs do YouTube vão para vídeo, outros para áudio
+- 18 de 20 músicas com vídeos do YouTube disponíveis
+
+**Navigation Flow**:
+- Botão "Vídeo" na lista leva direto para a página da música
+- Página abre automaticamente na tab de vídeo
+- Experiência de usuário mais direta e intuitiva
 
 ### v1.3.0 - Layout e UI Refinements (2025-11-17)
 
