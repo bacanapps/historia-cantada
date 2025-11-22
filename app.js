@@ -38,8 +38,14 @@
       }
 
       if (videoId) {
-        // Parameters: loop=1, playlist=videoId (required for loop), rel=0 (no related videos)
-        return `https://www.youtube.com/embed/${videoId}?loop=1&playlist=${videoId}&rel=0`;
+        // Parameters:
+        // - loop=1: Enable looping
+        // - playlist=videoId: Required for loop to work
+        // - rel=0: No related videos from other channels
+        // - modestbranding=1: Minimal YouTube branding
+        // - disablekb=1: Disable keyboard controls
+        // - fs=0: Disable fullscreen button (keeps users in kiosk)
+        return `https://www.youtube.com/embed/${videoId}?loop=1&playlist=${videoId}&rel=0&modestbranding=1&disablekb=1&fs=0`;
       }
     } catch (e) {
       return null;
