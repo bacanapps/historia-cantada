@@ -260,6 +260,10 @@ html,body{
 
 .choice-card{padding:24px;display:flex;flex-direction:column;gap:8px;cursor:pointer}
 .choice-card:hover{outline:1px solid rgba(125,92,255,.35); background:var(--panel-strong)}
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
 .choice-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
   background: rgba(99,138,255,.18); border:1px solid var(--border); font-size:22px}
 .choice-title{margin:2px 0 0;font-weight:700;font-size:22px;color:#ff0000 !important;}
