@@ -24,6 +24,28 @@
     return s;
   };
 
+  // Convert YouTube watch URL to embed URL
+  const getYouTubeEmbedUrl = (url) => {
+    if (!url) return null;
+    try {
+      const urlObj = new URL(url);
+      if (urlObj.hostname.includes('youtube.com')) {
+        const videoId = urlObj.searchParams.get('v');
+        if (videoId) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+      } else if (urlObj.hostname === 'youtu.be') {
+        const videoId = urlObj.pathname.slice(1);
+        if (videoId) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+      }
+    } catch (e) {
+      return null;
+    }
+    return null;
+  };
+
   // Avoid stale SW in local dev
   (function unregisterSWOnLocalhost() {
     try {
@@ -195,12 +217,36 @@
         "./assets/img/hero.png"
       );
 
-      const previewAudio = toRel(
-        (t.preview) ||
-        (t.previewSrc) ||
-        (t.assets && t.assets.preview && (t.assets.preview.file || t.assets.preview.src)) ||
-        t.audio || t.src || `./assets/audio/${id}.mp3`
-      );
+      let previewAudio = null;
+      let videoUrl = null;
+
+      // Extract video URL and audio from preview field
+      if (t.preview) {
+        if (typeof t.preview === 'object') {
+          const src = t.preview.src || t.preview.file || t.preview.url;
+          if (src && src.includes('youtube.com')) {
+            videoUrl = src;
+          } else {
+            previewAudio = toRel(src);
+          }
+        } else {
+          const src = t.preview;
+          if (src && src.includes('youtube.com')) {
+            videoUrl = src;
+          } else {
+            previewAudio = toRel(src);
+          }
+        }
+      }
+
+      // Fallback for audio
+      if (!previewAudio) {
+        previewAudio = toRel(
+          (t.previewSrc) ||
+          (t.assets && t.assets.preview && (t.assets.preview.file || t.assets.preview.src)) ||
+          t.audio || t.src || `./assets/audio/${id}.mp3`
+        );
+      }
 
       const adAudio = toRel(
         (t.audioDescription) ||
@@ -228,7 +274,7 @@
 
       return {
         id, title, artist, year, cover,
-        previewAudio, adAudio,
+        previewAudio, adAudio, videoUrl,
         transcriptHtml, transcript, synopsisHtml, synopsis, referenciaHtml, referencia, fontes,
         meta: [artist, year && String(year)].filter(Boolean).join(" • "),
       };
@@ -434,14 +480,9 @@ function Home({ onGo, theme, toggleTheme }) {
                     h("div", { className: "actions" },
                       h("button", {
                         type: "button",
-                        className: `btn btn-primary ${audio.id === t.id + ":preview" ? "is-active" : ""}`,
-                        onClick: (ev) => { ev.stopPropagation(); audio.toggle(t.id + ":preview", t.previewAudio); }
-                      }, audio.id === t.id + ":preview" ? (audio.playing ? "⏸️ Pausar" : "▶️ Retomar") : "▶️ Trecho"),
-                      t.adAudio ? h("button", {
-                        type: "button",
-                        className: `btn ${audio.id === t.id + ":ad" ? "btn-green is-active" : "btn-green"}`,
-                        onClick: (ev) => { ev.stopPropagation(); audio.toggle(t.id + ":ad", t.adAudio); }
-                      }, audio.id === t.id + ":ad" ? (audio.playing ? "⏸️ Audiodescrição" : "▶️ Audiodescrição") : "🎵 Audiodescrição") : null
+                        className: "btn btn-primary",
+                        onClick: (ev) => { ev.stopPropagation(); onOpenTrack(t.id); }
+                      }, "▶️ Vídeo")
                     )
                   )
                 )
@@ -465,7 +506,7 @@ function Home({ onGo, theme, toggleTheme }) {
 
   function TrackDetail({ slug, onBack, audio, theme, toggleTheme }) {
     const { loading, item } = useTrackById(slug);
-    const [tab, setTab] = useState("sobre");            // hooks must be at top
+    const [tab, setTab] = useState("video");            // hooks must be at top
 
     useEffect(() => () => audio.stopAll(false), [slug]); // stop when leaving
 
@@ -483,6 +524,38 @@ function Home({ onGo, theme, toggleTheme }) {
     const isAd = audio.id === (item.id + ":ad");
 
     const TabContent = () => {
+      if (tab === "video") {
+        const embedUrl = getYouTubeEmbedUrl(item.videoUrl);
+        if (!embedUrl) return h("p", { className: "copy" }, "Vídeo não disponível.");
+        return h("div", {
+          className: "video-wrapper",
+          style: {
+            position: "relative",
+            paddingBottom: "56.25%", // 16:9 aspect ratio
+            height: 0,
+            overflow: "hidden",
+            maxWidth: "100%",
+            background: "#000",
+            borderRadius: "8px",
+            marginTop: "4px"
+          }
+        },
+          h("iframe", {
+            src: embedUrl,
+            style: {
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              border: "none"
+            },
+            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            allowFullScreen: true,
+            title: `Vídeo: ${item.title}`
+          })
+        );
+      }
       if (tab === "letra") {
         if (item.transcriptHtml) return h("div", { className: "copy prose prose-invert", dangerouslySetInnerHTML: { __html: item.transcriptHtml } });
         if (item.transcript) return h("pre", { className: "copy" }, item.transcript);
@@ -526,20 +599,9 @@ function Home({ onGo, theme, toggleTheme }) {
         h("div", { style: { padding: "12px 8px 0" } },
           h("h2", { style: { margin: "6px 0 4px", fontWeight: 800 } }, item.title),
           h("p", { className: "page-subtle", style: { margin: 0 } }, item.meta),
-          h("div", { className: "actions" },
-            h("button", {
-              type: "button",
-              className: `btn btn-primary ${isPrev ? "is-active" : ""}`,
-              onClick: () => audio.toggle(item.id + ":preview", item.previewAudio),
-            }, isPrev ? (audio.playing ? "⏸️ Trecho" : "▶️ Trecho") : "▶️ Trecho"),
-            item.adAudio ? h("button", {
-              type: "button",
-              className: `btn btn-green ${isAd ? "is-active" : ""}`,
-              onClick: () => audio.toggle(item.id + ":ad", item.adAudio),
-            }, isAd ? (audio.playing ? "⏸️ Audiodescrição" : "▶️ Audiodescrição") : "🎵 Audiodescrição") : null
-          ),
           h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" } },
             h(Pill, { active: tab === "sobre", onClick: () => setTab("sobre") }, "Sobre"),
+            item.videoUrl ? h(Pill, { active: tab === "video", onClick: () => setTab("video") }, "Vídeo") : null,
             h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
             h(Pill, { active: tab === "referencia", onClick: () => setTab("referencia") }, "Referência"),
             h(Pill, { active: tab === "fontes", onClick: () => setTab("fontes") }, "Fontes"),
