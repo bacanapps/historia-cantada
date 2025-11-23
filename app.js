@@ -617,7 +617,7 @@ function Home({ onGo, theme, toggleTheme }) {
       ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v2025.11.23"
+        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
       )
     );
   }
@@ -697,7 +697,7 @@ function Home({ onGo, theme, toggleTheme }) {
           ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v2025.11.23"
+        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
       )
     );
   }
@@ -835,7 +835,7 @@ function Home({ onGo, theme, toggleTheme }) {
       ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v2025.11.23"
+        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
       )
     );
   }
