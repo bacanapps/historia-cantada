@@ -339,10 +339,17 @@
   /* --------------- Data --------------- */
   async function tryJson(url) {
     try {
+      console.log("Fetching JSON from:", url);
       const res = await fetch(url, { cache: "no-store" });
+      console.log("Response status:", res.status, res.ok);
       if (!res.ok) throw new Error(String(res.status));
-      return await res.json();
-    } catch { return null; }
+      const data = await res.json();
+      console.log("JSON loaded successfully:", data);
+      return data;
+    } catch (err) {
+      console.error("Failed to load JSON from", url, "Error:", err);
+      return null;
+    }
   }
 
   function usePresentation() {
