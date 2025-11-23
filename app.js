@@ -1,6 +1,19 @@
 (() => {
   const { createElement: h, useEffect, useMemo, useState, useCallback, useRef } = React;
 
+  /* ---------------- APP VERSION ---------------- */
+  const BUILD_VERSION = "v23.11.25 16:45"; // Update this when deploying
+  const getAppVersion = () => {
+    const loaded = new Date().toLocaleString('pt-BR', {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+    return `${BUILD_VERSION} (Carregado: ${loaded})`;
+  };
+
   /* ---------------- Utilities ---------------- */
   const toRel = (input) => {
     if (input == null) return null;
@@ -617,7 +630,7 @@ function Home({ onGo, theme, toggleTheme }) {
       ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
+        `© 2025 Dezembro Vermelho • Ministério da Saúde • ${getAppVersion()}`
       )
     );
   }
@@ -697,7 +710,7 @@ function Home({ onGo, theme, toggleTheme }) {
           ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
+        `© 2025 Dezembro Vermelho • Ministério da Saúde • ${getAppVersion()}`
       )
     );
   }
@@ -835,7 +848,7 @@ function Home({ onGo, theme, toggleTheme }) {
       ),
 
       h("div", { className: "app-footer-line" },
-        "© 2025 Dezembro Vermelho • Ministério da Saúde • v23.11.25 16:45"
+        `© 2025 Dezembro Vermelho • Ministério da Saúde • ${getAppVersion()}`
       )
     );
   }
