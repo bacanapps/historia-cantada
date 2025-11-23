@@ -353,7 +353,17 @@
   }
 
   function usePresentation() {
-    const [data, setData] = useState(null);
+    // Embedded fallback data - same as presentation.json
+    const FALLBACK = {
+      title: "A História Cantada da Aids no Brasil",
+      introHtml: "<p>A década de 1980 foi marcada pelo surgimento da epidemia de aids e pelo auge do pop rock brasileiro. O samba também fez contribuições ao tema neste período. Não por acaso, diversos artistas, bandas e até escolas de samba abordaram a temática em suas canções e enredos. Convidamos você a conhecer \u201cA História Cantada da Aids\u201d e as possíveis relações síncronas entre cultura e epidemia. </p><p>Parte-se do pressuposto que as músicas possuem potencialidades de interpretação e reflexão social, pois, ao mesmo tempo em que expressam sentimentos individuais, revelam e problematizam questões coletivas, culturais e históricas da resposta brasileira à aids.</p>",
+      audioDescription: { src: "./assets/audio/presentation.mp3", durationSec: 2 },
+      heroImage: "./assets/img/logo_aids_40anos.png",
+      credits: [{ role: "Curadoria", name: "Nome do Curador" }],
+      language: "pt-BR"
+    };
+
+    const [data, setData] = useState(FALLBACK);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
       (async () => {
@@ -361,7 +371,9 @@
         console.log("Loading presentation from:", url);
         const json = await tryJson(url);
         console.log("Presentation data loaded:", json);
-        setData(json);
+        if (json) {
+          setData(json);
+        }
         setLoading(false);
       })();
     }, []);
