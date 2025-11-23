@@ -556,7 +556,7 @@ function Home({ onGo, theme, toggleTheme }) {
     const { data, loading } = usePresentation();
     const hero = toRel((data && data.heroImage) || "./assets/img/hero.png");
     const text = (data && (data.introHtml || data.intro)) || "Bem-vindo(a) à História Cantada.";
-    const audioSrc = toRel((data && (data.audio || data.audioSrc)) || "./assets/audio/presentation.mp3");
+    const audioSrc = toRel((data && (data.audio || data.audioSrc || (data.audioDescription && data.audioDescription.src))) || "./assets/audio/presentation.mp3");
     const isActive = audio.id === "presentation";
     const btnLabel = isActive && audio.playing ? "⏸️ Pausar" : "▶️ Audiodescrição";
 
