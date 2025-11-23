@@ -63,6 +63,175 @@
     } catch (_) {}
   })();
 
+  /* --------------- Analytics Tracker --------------- */
+  const AnalyticsTracker = {
+    /**
+     * Check if gtag is available
+     */
+    isAvailable() {
+      return typeof window.gtag === 'function';
+    },
+
+    /**
+     * Track page views
+     * @param {string} pageName - Name of the page (e.g., 'home', 'faixas', 'apresentacao')
+     * @param {string} pageTitle - Title of the page
+     */
+    trackPageView(pageName, pageTitle) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'page_view', {
+          page_title: pageTitle,
+          page_location: window.location.href,
+          page_path: window.location.pathname + window.location.hash,
+          page_name: pageName
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track song views (when user opens a song detail page)
+     * @param {string} songId - Unique identifier of the song
+     * @param {string} songTitle - Title of the song
+     * @param {string} artist - Artist name
+     * @param {string} year - Year of the song
+     */
+    trackSongView(songId, songTitle, artist, year) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'view_item', {
+          item_id: songId,
+          item_name: songTitle,
+          item_category: 'song',
+          artist: artist,
+          year: year
+        });
+        // Also send a custom event for easier filtering
+        window.gtag('event', 'song_view', {
+          song_id: songId,
+          song_title: songTitle,
+          artist: artist,
+          year: year
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track audio plays (video or audio preview)
+     * @param {string} songId - Unique identifier of the song
+     * @param {string} songTitle - Title of the song
+     * @param {string} audioType - Type of audio ('video', 'preview', 'audio_description')
+     */
+    trackAudioPlay(songId, songTitle, audioType) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'audio_play', {
+          song_id: songId,
+          song_title: songTitle,
+          audio_type: audioType,
+          event_category: 'engagement',
+          event_label: `${songTitle} - ${audioType}`
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track presentation audio plays
+     * @param {string} contentTitle - Title of the content
+     */
+    trackPresentationAudio(contentTitle) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'audio_play', {
+          content_type: 'presentation',
+          content_title: contentTitle,
+          audio_type: 'audio_description',
+          event_category: 'engagement'
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track search queries
+     * @param {string} searchTerm - The search term entered by user
+     * @param {number} resultCount - Number of results returned
+     */
+    trackSearch(searchTerm, resultCount) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'search', {
+          search_term: searchTerm,
+          result_count: resultCount,
+          event_category: 'engagement'
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track tab changes in song detail page
+     * @param {string} songId - Unique identifier of the song
+     * @param {string} songTitle - Title of the song
+     * @param {string} tabName - Name of the tab ('video', 'letra', 'sobre', 'referencia', 'fontes')
+     */
+    trackTabChange(songId, songTitle, tabName) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'tab_view', {
+          song_id: songId,
+          song_title: songTitle,
+          tab_name: tabName,
+          event_category: 'engagement'
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track theme toggle
+     * @param {string} newTheme - The new theme applied
+     */
+    trackThemeToggle(newTheme) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'theme_toggle', {
+          theme: newTheme,
+          event_category: 'user_preference'
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    },
+
+    /**
+     * Track navigation events
+     * @param {string} from - Source page
+     * @param {string} to - Destination page
+     */
+    trackNavigation(from, to) {
+      if (!this.isAvailable()) return;
+      try {
+        window.gtag('event', 'navigation', {
+          from_page: from,
+          to_page: to,
+          event_category: 'navigation'
+        });
+      } catch (e) {
+        console.error('Analytics tracking error:', e);
+      }
+    }
+  };
+
   function showFatalError(message, err) {
     try {
       const root = document.getElementById("root");
@@ -415,7 +584,12 @@ function Home({ onGo, theme, toggleTheme }) {
           h("button", {
             className: "audio-btn",
             type: "button",
-            onClick: () => audio.toggle("presentation", audioSrc),
+            onClick: () => {
+              audio.toggle("presentation", audioSrc);
+              if (!isActive || !audio.playing) {
+                AnalyticsTracker.trackPresentationAudio("Apresentação");
+              }
+            },
             "aria-pressed": String(isActive && audio.playing),
           }, btnLabel)
         )
@@ -433,9 +607,14 @@ function Home({ onGo, theme, toggleTheme }) {
     const filtered = useMemo(() => {
       const needle = q.trim().toLowerCase();
       if (!needle) return tracks;
-      return tracks.filter((t) =>
+      const results = tracks.filter((t) =>
         [t.title, t.artist, t.meta, ...(t.tags || [])].join(" ").toLowerCase().includes(needle)
       );
+      // Track search when there's a query
+      if (needle) {
+        AnalyticsTracker.trackSearch(needle, results.length);
+      }
+      return results;
     }, [q, tracks]);
 
     return h("div", { className: "page fade-in" },
@@ -515,6 +694,13 @@ function Home({ onGo, theme, toggleTheme }) {
     const { loading, item } = useTrackById(slug);
     const [tab, setTab] = useState("video");            // hooks must be at top
 
+    // Track song view when item loads
+    useEffect(() => {
+      if (item) {
+        AnalyticsTracker.trackSongView(item.id, item.title, item.artist, item.year);
+      }
+    }, [item]);
+
     useEffect(() => () => audio.stopAll(false), [slug]); // stop when leaving
 
     if (loading) {
@@ -529,6 +715,16 @@ function Home({ onGo, theme, toggleTheme }) {
 
     const isPrev = audio.id === (item.id + ":preview");
     const isAd = audio.id === (item.id + ":ad");
+
+    // Function to handle tab changes with analytics
+    const handleTabChange = (newTab) => {
+      setTab(newTab);
+      AnalyticsTracker.trackTabChange(item.id, item.title, newTab);
+      // Track video play when video tab is selected (video auto-plays)
+      if (newTab === "video" && item.videoUrl) {
+        AnalyticsTracker.trackAudioPlay(item.id, item.title, "video");
+      }
+    };
 
     const TabContent = () => {
       if (tab === "video") {
@@ -607,11 +803,11 @@ function Home({ onGo, theme, toggleTheme }) {
           h("h2", { style: { margin: "6px 0 4px", fontWeight: 800 } }, item.title),
           h("p", { className: "page-subtle", style: { margin: 0 } }, item.meta),
           h("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "10px" } },
-            h(Pill, { active: tab === "sobre", onClick: () => setTab("sobre") }, "Sobre"),
-            item.videoUrl ? h(Pill, { active: tab === "video", onClick: () => setTab("video") }, "Vídeo") : null,
-            h(Pill, { active: tab === "letra", onClick: () => setTab("letra") }, "Letra"),
-            h(Pill, { active: tab === "referencia", onClick: () => setTab("referencia") }, "Referência"),
-            h(Pill, { active: tab === "fontes", onClick: () => setTab("fontes") }, "Fontes"),
+            h(Pill, { active: tab === "sobre", onClick: () => handleTabChange("sobre") }, "Sobre"),
+            item.videoUrl ? h(Pill, { active: tab === "video", onClick: () => handleTabChange("video") }, "Vídeo") : null,
+            h(Pill, { active: tab === "letra", onClick: () => handleTabChange("letra") }, "Letra"),
+            h(Pill, { active: tab === "referencia", onClick: () => handleTabChange("referencia") }, "Referência"),
+            h(Pill, { active: tab === "fontes", onClick: () => handleTabChange("fontes") }, "Fontes"),
           ),
           h("div", { style: { marginTop: "10px" } }, h(TabContent))
         )
@@ -646,6 +842,8 @@ function Home({ onGo, theme, toggleTheme }) {
         const url = new URL(window.location);
         url.searchParams.set('theme', next);
         window.history.pushState({}, '', url);
+        // Track theme toggle
+        AnalyticsTracker.trackThemeToggle(next);
         return next;
       });
     }, []);
@@ -662,6 +860,27 @@ function Home({ onGo, theme, toggleTheme }) {
     const [route, navigate] = useHashRoute(ROUTES.home);
     const audio = useAudio();
     const { theme, toggleTheme } = useTheme();
+    const prevRouteRef = useRef(null);
+
+    // Track page views when route changes
+    useEffect(() => {
+      const pageName = route.name === "faixas-detail" ? `faixas/${route.slug}` : route.name;
+      const pageTitle = route.name === "faixas-detail"
+        ? `Música: ${route.slug}`
+        : route.name === ROUTES.home
+          ? "Home"
+          : route.name === ROUTES.apresentacao
+            ? "Apresentação"
+            : "Músicas";
+
+      AnalyticsTracker.trackPageView(pageName, pageTitle);
+
+      // Track navigation if there was a previous route
+      if (prevRouteRef.current) {
+        AnalyticsTracker.trackNavigation(prevRouteRef.current, pageName);
+      }
+      prevRouteRef.current = pageName;
+    }, [route]);
 
     useEffect(() => { audio.stopAll(false); }, [route]); // stop current when route changes
 
