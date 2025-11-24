@@ -216,6 +216,7 @@ html,body{
   margin: 0 0 1.5rem;
   letter-spacing: -0.02em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 :root[data-theme="dark"] .hero-title {

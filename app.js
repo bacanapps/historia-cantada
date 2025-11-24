@@ -535,7 +535,7 @@ function Home({ onGo, theme, toggleTheme }) {
         h("div", { className: "hero-content" },
           h("h1", { className: "hero-title" }, "A História Cantada da Aids no Brasil"),
           h("p", { className: "hero-lede" },
-            "Descubra músicas temáticas sobre a AIDS no Brasil e suas histórias e análises"
+            ""
           )
         )
       )
@@ -553,7 +553,7 @@ function Home({ onGo, theme, toggleTheme }) {
           h("div", { className: "choice-icon" }, "📘"),
           h("h2", { className: "choice-title" }, "Apresentação"),
           h("p", { className: "choice-desc" },
-            "Conheça o contexto da mostra e sua importância na luta contra a AIDS"
+            ""
           ),
           h("button", { type: "button", className: "btn btn-primary" }, "Explorar")
         ),
@@ -567,7 +567,7 @@ function Home({ onGo, theme, toggleTheme }) {
           h("div", { className: "choice-icon" }, "🎵"),
           h("h2", { className: "choice-title" }, "Músicas"),
           h("p", { className: "choice-desc" },
-            "Ouça trechos das canções e veja suas análises e transcrições"
+            ""
           ),
           h("button", { type: "button", className: "btn btn-green" }, "Explorar")
         )
