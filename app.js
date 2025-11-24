@@ -2,15 +2,10 @@
   const { createElement: h, useEffect, useMemo, useState, useCallback, useRef } = React;
 
   /* ---------------- APP VERSION ---------------- */
+  // Update this manually when deploying to reflect last GitHub update
+  const APP_VERSION = '24/11/2025, 13:40';
   const getAppVersion = () => {
-    const loaded = new Date().toLocaleString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-    return `(v. ${loaded})`;
+    return `(v. ${APP_VERSION})`;
   };
 
   /* ---------------- Utilities ---------------- */
