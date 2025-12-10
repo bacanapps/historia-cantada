@@ -1,302 +1,801 @@
 [
   {
     "id": "song1",
-    "title": "Aids",
+    "title": "Aids [AIDS]",
     "artist": "Leo Jaime e Leandro Verdeal",
     "year": 1983,
-    "genres": ["rock", "pop"],
+    "genres": [
+      "rock",
+      "pop"
+    ],
     "cover": "/assets/covers/song1.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=Spyioc-CVzw", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>As primeiras notícias sobre a aids chegaram ao Brasil com os relatos de um raro câncer de pele que rapidamente levava à morte homens homossexuais nos Estados Unidos. Inicialmente, pouco se sabia sobre a doença, até então envolta em mistério, sem diagnóstico ou tratamento definidos, e marcada por especulações. Por isso, difundiu-se, equivocadamente, a ideia de que a aids era “doença de gay”, o que gerou estigmas como “câncer gay”, “peste gay” e “Grid” (sigla em inglês de Gay-Related Immune Deficiency), com tradução para português de imunodeficiência relacionada a gays. Somente em 1985, com a descoberta do HIV e a constatação de casos também entre mulheres, essa percepção começou a ser revista. Nesse contexto, o termo “gay”, importado da cultura norte-americana, ganhou maior visibilidade no espaço público brasileiro. </p><p>O canto de Léo Jaime, marcado por uma entonação humorística própria da geração musical da qual ele fez parte, utiliza a estética eufórica dos jingles, um recurso publicitário de fácil assimilação que favorece a fixação sonora na memória da pessoa ouvinte. Ao adotar a sigla “aids” como um rótulo mercadológico para uma novidade, a canção reforça o caráter intruso e importado do termo. Nessa composição, a morte associada à aids é tratada com ironia. Embora atualmente essa abordagem possa soar insensível ou até mesmo desrespeitosa diante da gravidade do tema, ela deve ser compreendida a partir do enquadramento geracional em que foi produzida.</p>",
-    "analysisHtml": "<p>AIDS. Intérprete: Leo Jaime. Compositores: L. Jaime e L. Verdeal. In: PHODAS C. Intérprete: Leo Jaime. Rio de Janeiro: CBS Brasil, 1983. 1 disco vinil, lado B, faixa 2 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=Spyioc-CVzw",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>As primeiras notícias sobre a aids chegaram ao Brasil com os relatos de um raro câncer de pele que rapidamente levava à morte homens homossexuais nos Estados Unidos. Inicialmente, pouco se sabia sobre a doença, até então envolta em mistério, sem diagnóstico ou tratamento definidos, e marcada por especulações. Por isso, difundiu-se, equivocadamente, a ideia de que a aids era “doença de gay”, o que gerou estigmas como “câncer gay”, “peste gay” e “Grid” (sigla em inglês de Gay-Related Immune Deficiency), com tradução para português de imunodeficiência relacionada a gays. Somente em 1985, com a descoberta do HIV e a constatação de casos também entre mulheres, essa percepção começou a ser revista. Nesse contexto, o termo “gay”, importado da cultura norte-americana, ganhou maior visibilidade no espaço público brasileiro. </p><p>O canto de Léo Jaime, marcado por uma entonação humorística própria da geração musical da qual ele fez parte, utiliza a estética eufórica dos jingles, um recurso publicitário de fácil assimilação que favorece a fixação sonora na memória da pessoa ouvinte. Ao adotar a sigla “aids” como um rótulo mercadológico para uma novidade, a canção reforça o caráter intruso e importado do termo. Nessa composição, a morte associada à aids é tratada com ironia. Embora atualmente essa abordagem possa soar insensível ou até mesmo desrespeitosa diante da gravidade do tema, ela deve ser compreendida a partir do enquadramento geracional em que foi produzida.</p>",
+      "en": "<p>The first news about AIDS reached Brazil with reports of a rare skin cancer that quickly led to the death of homosexual men in the United States. Initially, little was known about the disease, which was shrouded in mystery, with no defined diagnosis or treatment, and marked by speculation. As a result, the mistaken idea spread that AIDS was a \"gay disease,\" which led to stigmas such as \"gay cancer,\" \"gay plague,\" and \"GRID\" (Gay-Related Immune Deficiency). It was only in 1985, with the discovery of HIV and the confirmation of cases among women, that this perception began to be revised. In this context, the term \"gay,\" imported from American culture, gained greater visibility in the Brazilian public sphere.</p><p>Léo Jaime's singing, marked by a humorous intonation typical of the musical generation to which he belonged, uses the euphoric aesthetics of jingles, an easily assimilated advertising device that helps the sound stick in the listener's memory. By adopting the acronym \"AIDS\" as a marketing label for a novelty, the song reinforces the intrusive and imported nature of the term. In this composition, death associated with AIDS is treated with irony. Although this approach may currently sound insensitive or even disrespectful given the seriousness of the subject, it must be understood in the context in which it was produced.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>AIDS. Intérprete: Leo Jaime. Compositores: L. Jaime e L. Verdeal. In: PHODAS C. Intérprete: Leo Jaime. Rio de Janeiro: CBS Brasil, 1983. 1 disco vinil, lado B, faixa 2 (4 min).</p>",
+      "en": "<p>AIDS. Performer: Leo Jaime. Composers: L. Jaime and L. Verdeal. In: PHODAS \"C.\" Performer: Leo Jaime. Rio de Janeiro: CBS Brasil, 1983. 1 vinyl record, side B, track 2 (4 min).</p>"
+    },
     "transcriptHtml": "<p>É a última moda que chegou de Nova York<br>E deve ser bom como tudo o que vem do norte<br>A sua mãe vai gostar<br>O seu pai vai achar moderno<br>É mais quente que o inferno<br>Essa onda é de morte</p><p>New wave, patins, lennon and tennis nike<br>Walk man, big mac, fender strato caster<br>Vai pegar, vai pintar até na novela das 8<br>E você vai copiar, vai copiar, vai copiar</p><p>Aids, não tente colocar band-aids<br>Aids, não tente colocar band-aids<br>Aids, não tente colocar band-aids<br>Aids, não tente colocar band-aids</p><p>Álbum: Phodas C - 1983<br>Composição: Leo Jaime e Leandro Verdeal</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=Spyioc-CVzw" } ],
-    "tags": ["anos-80", "rock", "leo-jaime", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=Spyioc-CVzw"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "leo-jaime",
+      "aids"
+    ]
   },
   {
     "id": "song2",
-    "title": "Vírus do amor",
+    "title": "Vírus do amor [Love Virus]",
     "artist": "Rita Lee e Roberto de Carvalho",
     "year": 1986,
-    "genres": ["rock", "pop"],
+    "genres": [
+      "rock",
+      "pop"
+    ],
     "cover": "/assets/covers/song2.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=5dyul8kqY0c", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Gravada por Rita Lee, a canção retrata a aids como uma presença sorrateira, associada à morte. Em “Vírus do amor”, imagens bélicas como “turistas de guerra”, “restos mortais”, “prisioneiros”, “munição” e “fogo” reforçam a ideia da doença como inimiga a ser combatida, em sintonia com a linguagem militar frequentemente usada para tratar do tema naquele período. O destaque dado ao vírus dialoga com um momento decisivo da trajetória epidemiológica da aids, entre 1983 e 1985, quando o HIV foi isolado e identificado como o agente responsável pela síndrome da imunodeficiência adquirida, possibilitando avanços no diagnóstico e no tratamento.</p><p>Mencionar o “vírus do amor” produz efeitos de sentido diferentes daqueles gerados pela linguagem científica, frequentemente marcada pela frieza ao tratar da aids. Ao conferir um apelido afetivo ao agente infeccioso, a composição amplia os significados do vírus na vida da pessoa vivendo com HIV, incluindo não apenas a dimensão biológica da infecção, mas também seus afetos e experiências subjetivas. </p>",
-    "analysisHtml": "<p>VÍRUS do amor. Intérprete: Rita Lee. Compositores: R. Lee e R. de Carvalho. In: RITA e Roberto. Intérprete: Rita Lee. Rio de Janeiro: Som Livre, 1985. 1 disco vinil, lado A, faixa 1 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=5dyul8kqY0c",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Gravada por Rita Lee, a canção retrata a aids como uma presença sorrateira, associada à morte. Em “Vírus do amor”, imagens bélicas como “turistas de guerra”, “restos mortais”, “prisioneiros”, “munição” e “fogo” reforçam a ideia da doença como inimiga a ser combatida, em sintonia com a linguagem militar frequentemente usada para tratar do tema naquele período. O destaque dado ao vírus dialoga com um momento decisivo da trajetória epidemiológica da aids, entre 1983 e 1985, quando o HIV foi isolado e identificado como o agente responsável pela síndrome da imunodeficiência adquirida, possibilitando avanços no diagnóstico e no tratamento.</p><p>Mencionar o “vírus do amor” produz efeitos de sentido diferentes daqueles gerados pela linguagem científica, frequentemente marcada pela frieza ao tratar da aids. Ao conferir um apelido afetivo ao agente infeccioso, a composição amplia os significados do vírus na vida da pessoa vivendo com HIV, incluindo não apenas a dimensão biológica da infecção, mas também seus afetos e experiências subjetivas. </p>",
+      "en": "<p>Recorded by Rita Lee, the song portrays AIDS as a sneaky presence associated with death. In \"Vírus do amor\" (Love Virus), warlike images such as \"war tourists,\" \"remains,\" \"prisoners,\" \"ammunition,\" and \"fire\" reinforce the idea of the disease as an enemy to be fought, in line with the military language often used to address the issue at that time. The emphasis given to the virus corresponds to a decisive moment in the epidemiological trajectory of AIDS, between 1983 and 1985, when HIV was isolated and identified as the agent responsible for acquired immunodeficiency syndrome, enabling advances in diagnosis and treatment.</p><p>The mention of a \"love virus\" elicits different effects of meaning than those produced by scientific language, which is often marked by coldness when dealing with AIDS. By giving the infectious agent an affectionate nickname, the composition broadens the meanings of the virus in the life of the person living with HIV, including not only the biological dimension of the infection, but also their affections and subjective experiences.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>VÍRUS do amor. Intérprete: Rita Lee. Compositores: R. Lee e R. de Carvalho. In: RITA e Roberto. Intérprete: Rita Lee. Rio de Janeiro: Som Livre, 1985. 1 disco vinil, lado A, faixa 1 (4 min).</p>",
+      "en": "<p>VÍRUS do amor. Performer: Rita Lee. Composers: R. Lee and R. de Carvalho. In: RITA e Roberto. Performer: Rita Lee. Rio de Janeiro: Som Livre, 1985. 1 vinyl record, side A, track 1 (4 min).</p>"
+    },
     "transcriptHtml": "<p>Aqui estamos nós<br>Turistas de guerra<br>Bizarros casais<br>Restos mortais do Ibirapuera</p><p>O vírus do amor<br>Dentro da gente<br>Beira o caos<br>42 graus de febre contente</p><p>Prisioneiros de um arranha-céu<br>Lá embaixo, o mundo cruel é tão chatinho<br>Você é toda a minha munição<br>Não negue fogo pro meu coração machucadinho<br>Cambalache de paixão</p><p>(Cambalache-che-che-che)<br>(Cambalache-che)<br>(Cambala, cambalache-che-che-che)</p><p>Aqui estamos nós<br>Turistas de guerra<br>Bizarros casais<br>Restos mortais do Ibirapuera</p><p>(O vírus do amor)<br>(Beira o caos)<br>(Febre, febre)</p><p>(Cambalache-che-che-che)<br>(Cambalache)<br>(O vírus do amor)</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=5dyul8kqY0c" } ],
-    "tags": ["anos-80", "rock", "rita-lee", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=5dyul8kqY0c"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "rita-lee",
+      "aids"
+    ]
   },
   {
     "id": "song3",
-    "title": "Vamo comer",
+    "title": "Vamo comer [Let’s Eat]",
     "artist": "Caetano Veloso e Tony Costa",
     "year": 1987,
-    "genres": ["mpb", "tropicalismo"],
+    "genres": [
+      "mpb",
+      "tropicalismo"
+    ],
     "cover": "/assets/covers/song3.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=8SMVuRymJww", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A música equilibra crítica e leveza ao misturar samba, bossa nova e tropicalismo para refletir, de forma divertida e profunda, sobre as contradições e a criatividade do Brasil da época. Assim como em “Aids”, de Leo Jaime, a música reitera o caráter intruso e importado da aids. Contudo, a relação explícita com a aids vem da crítica do cantor ao então arcebispo do Rio de Janeiro por ter falado, em entrevista, que a aids seria “um castigo merecido” à homossexualidade. A crítica se repetiu em “Americanos”. </p>",
-    "analysisHtml": "<p>“VAMO” comer. Intérpretes: Caetano Veloso e Luiz Melodia. Compositores: C. Veloso e T. Costa. In: CAETANO. Intérprete: Caetano Veloso e outros. Rio de Janeiro: Polygram/Philips, 1987. 1 disco vinil, lado B, faixa 1 (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=8SMVuRymJww",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A música equilibra crítica e leveza ao misturar samba, bossa nova e tropicalismo para refletir, de forma divertida e profunda, sobre as contradições e a criatividade do Brasil da época. Assim como em “Aids”, de Leo Jaime, a música reitera o caráter intruso e importado da aids. Contudo, a relação explícita com a aids vem da crítica do cantor ao então arcebispo do Rio de Janeiro por ter falado, em entrevista, que a aids seria “um castigo merecido” à homossexualidade. A crítica se repetiu em “Americanos”. </p>",
+      "en": "<p>The song balances criticism and lightness by mixing samba, bossa nova, and tropicalism to reflect, in a fun and profound way, on the contradictions and creativity of Brazil at the time. As in Leo Jaime's \"Aids,\" the song reiterates the intrusive and imported nature of AIDS. However, the explicit reference to AIDS comes from the singer's criticism of the then archbishop of Rio de Janeiro, who said in an interview that AIDS was \"a deserved punishment\" for homosexuality. The criticism was repeated later in the song \"Americanos.\"</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>“VAMO” comer. Intérpretes: Caetano Veloso e Luiz Melodia. Compositores: C. Veloso e T. Costa. In: CAETANO. Intérprete: Caetano Veloso e outros. Rio de Janeiro: Polygram/Philips, 1987. 1 disco vinil, lado B, faixa 1 (3 min).</p>",
+      "en": "<p>\"VAMO\" comer. Performer: Caetano Veloso and Luiz Melodia. Composers: C. Veloso and T. Costa. In: CAETANO. Performer: Caetano Veloso and others. Rio de Janeiro: Polygram/Philips, 1987. 1 vinyl record, side B, track 1 (3 min).</p>"
+    },
     "transcriptHtml": "<p>Vamo comer<br>Vamo comer</p><p>Vamo comer<br>Vamo comer feijão<br>Vamo comer<br>Vamo comer farinha<br>Se tiver<br>Se não tiver então<br>Ô, ô, ô, ô</p><p>Vamo comer<br>Vamo comer faisão<br>Vamo comer<br>Vamo comer tempura<br>Se tiver<br>Se não tiver então<br>Ô, ô, ô, ô</p><p>Eu não sou<br>Deputado baiano<br>E, como dizia o outro<br>Não sou de reclamar<br>Mas se estamos<br>Nesse cano<br>Não consigo me calar</p><p>É um papo<br>De pelicano romântico<br>Aberto pro bico<br>De quem alcançar<br>Quem quiser ver<br>Quem quiser ouvir<br>Quem quiser falar</p><p>Vamo comer<br>Vamo comer, João<br>Vamo comer<br>Vamo comer, Maria<br>Se tiver<br>Se não tiver então<br>Ô, ô, ô, ô<br>Vamo comer<br>Vamo comer canção<br>Vamo comer<br>Vamo comer poesia<br>Se tiver<br>Se não tiver então<br>Ô, ô, ô, ô</p><p>O padre na televisão</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=8SMVuRymJww" } ],
-    "tags": ["anos-80", "mpb", "caetano-veloso", "tropicalismo"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=8SMVuRymJww"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "mpb",
+      "caetano-veloso",
+      "tropicalismo"
+    ]
   },
   {
     "id": "song4",
-    "title": "Vida louca vida",
+    "title": "Vida louca vida [Life, Crazy Life]",
     "artist": "Lobão e Bernardo Vilhena",
     "year": 1987,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/song4.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=7fTy_mlJVuo", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Composta por Lobão, “Vida louca vida” ganhou um novo significado na voz de Cazuza. Cantada por alguém que vivia publicamente a luta contra o HIV, frases como “vida breve” e “ninguém vai nos perdoar, nosso crime não compensa” ressoam com a fragilidade da vida e a urgência sentidas por quem estava enfrentando a doença. A música se transformou em um hino de resistência, ampliando seu significado original para o contexto da epidemia e ficando marcada como uma das canções que simbolizam o enfrentamento à aids nos anos 80.</p>",
-    "analysisHtml": "<p>VIDA louca vida. Intérprete: Lobão. Compositores: Lobão e B. Vilhena. In: VIDA bandida. Intérprete: Lobão. Rio de Janeiro: RCA Victor, 1987. 1 disco vinil, lado B, faixa 2 (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=7fTy_mlJVuo",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Composta por Lobão, “Vida louca vida” ganhou um novo significado na voz de Cazuza. Cantada por alguém que vivia publicamente a luta contra o HIV, frases como “vida breve” e “ninguém vai nos perdoar, nosso crime não compensa” ressoam com a fragilidade da vida e a urgência sentidas por quem estava enfrentando a doença. A música se transformou em um hino de resistência, ampliando seu significado original para o contexto da epidemia e ficando marcada como uma das canções que simbolizam o enfrentamento à aids nos anos 80.</p>",
+      "en": "<p>Composed by Lobão, \"Vida louca vida\" took on a new meaning in Cazuza's voice. Sung by someone who was publicly living with HIV, phrases such as \"brief life\" and \"no one will forgive us, our crime doesn't pay\" resonate with the fragility of life and the urgency felt by those facing the disease. The track became an anthem of resistance, expanding its original meaning to the context of the epidemic and becoming marked as one of the songs that symbolized the fight against AIDS in the 1980s.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>VIDA louca vida. Intérprete: Lobão. Compositores: Lobão e B. Vilhena. In: VIDA bandida. Intérprete: Lobão. Rio de Janeiro: RCA Victor, 1987. 1 disco vinil, lado B, faixa 2 (3 min).</p>",
+      "en": "<p>VIDA louca vida. Performer: Lobão. Composers: Lobão and B. Vilhena. In: VIDA bandida. Performer: Lobão. Rio de Janeiro: RCA Victor, 1987. 1 vinyl record, side B, track 2 (3 min).</p>"
+    },
     "transcriptHtml": "<p>Se ninguém olha<br>Quando você passa<br>Você logo acha:<br>A vida voltou ao normal...</p><p>Aquela vida sem sentido<br>Volta sem perigo<br>A mesma vida tudo<br>Tudo sempre igual...</p><p>Se alguém olha quando<br>Você passa, você logo diz:<br>Palhaço! <br>Você acha que não tá legal<br>Perde logo a noção do perigo<br>Todos os sentidos<br>Você passa mal...</p><p>Vida Louca<br>Vida!<br>Vida Breve!<br>Já que eu não posso te levar<br>Quero que você me leve<br>Vida Louca<br>Vida!<br>Vida Imensa!<br>Ninguém vai nos perdoar<br>Nosso crime não compensa...</p><p>Se ninguém olha<br>Quando você passa<br>Você logo acha:<br>Tô Carente <br>Eu sou manchete popular<br>Já me cansei<br>De toda essa tolice<br>Babaquice<br>Dessa eterna falta<br>Do que falar...</p><p>Vida Louca<br>Vida!<br>Vida Breve!<br>Já que eu não posso te levar<br>Quero que você me leve<br>Vida Louca<br>Vida!<br>Vida Imensa!<br>Ninguém vai nos perdoar<br>Nosso crime não compensa...(2x)</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=7fTy_mlJVuo" } ],
-    "tags": ["anos-80", "rock", "cazuza", "lobao"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=7fTy_mlJVuo"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "cazuza",
+      "lobao"
+    ]
   },
   {
     "id": "song5",
-    "title": "Bota a camisinha",
+    "title": "Bota a camisinha [Put on a Condom]",
     "artist": "João Roberto Kelly e Chacrinha",
     "year": 1987,
-    "genres": ["marchinha", "carnaval"],
+    "genres": [
+      "marchinha",
+      "carnaval"
+    ],
     "cover": "/assets/covers/song5.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=6TTLIszKJW0", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Uma das mais tradicionais marchinhas de Carnaval brasileiras, teve grande contribuição para as ações de conscientização na resposta brasileira à aids. De forma lúdica e festiva, e com todo o humor e irreverência da interpretação de Abelardo Barbosa, o Chacrinha, a canção utiliza a metáfora da chuva e do calor para falar sobre a importância do uso de preservativos, associando a camisinha a um item tão necessário quanto um guarda-chuva em dia de chuva. O refrão repetitivo serve como um lembrete cativante e fácil de memorizar, enfatizando a necessidade de proteção durante as relações sexuais, especialmente no período de Carnaval.</p>",
-    "analysisHtml": "<p>BOTA a camisinha. Intérprete: Chacrinha. Compositores: J. R. Kelly e Chacrinha. In: CHACRINHA. Intérprete: Chacrinha. Rio de Janeiro: BMG/Ariola, 1987. 1 disco vinil single, lado A (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=6TTLIszKJW0",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Uma das mais tradicionais marchinhas de Carnaval brasileiras, teve grande contribuição para as ações de conscientização na resposta brasileira à aids. De forma lúdica e festiva, e com todo o humor e irreverência da interpretação de Abelardo Barbosa, o Chacrinha, a canção utiliza a metáfora da chuva e do calor para falar sobre a importância do uso de preservativos, associando a camisinha a um item tão necessário quanto um guarda-chuva em dia de chuva. O refrão repetitivo serve como um lembrete cativante e fácil de memorizar, enfatizando a necessidade de proteção durante as relações sexuais, especialmente no período de Carnaval.</p>",
+      "en": "<p>One of the most traditional Brazilian Carnival tunes, it made a major contribution to raising awareness in Brazil's response to AIDS. In a playful and festive way, and with all the humor and irreverence of Chacrinha's interpretation, the song uses the metaphor of rain and heat to talk about the importance of using condoms, associating them with an item as necessary as an umbrella on a rainy day. The repetitive chorus serves as a catchy and easy-to-remember reminder, emphasizing the need for protection during sexual intercourse, especially during Carnival.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>BOTA a camisinha. Intérprete: Chacrinha. Compositores: J. R. Kelly e Chacrinha. In: CHACRINHA. Intérprete: Chacrinha. Rio de Janeiro: BMG/Ariola, 1987. 1 disco vinil single, lado A (3 min).</p>",
+      "en": "<p>BOTA a camisinha. Performer: Chacrinha. Composers: J. R. Kelly and Chacrinha. In: CHACRINHA. Performer: Chacrinha. Rio de Janeiro: BMG/Ariola, 1987. 1 vinyl single record, side A (3 min).</p>"
+    },
     "transcriptHtml": "<p>Bota camisinha<br>Bota meu amor<br>Que hoje tá chovendo<br>Não vai fazer calor</p><p>Bota a camisinha no pescoço<br>Bota geral<br>Não quero ver ninguém<br>Sem camisinha<br>Prá não se machucar<br>No Carnaval...</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=6TTLIszKJW0" } ],
-    "tags": ["anos-80", "marchinha", "chacrinha", "carnaval", "prevencao"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=6TTLIszKJW0"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "marchinha",
+      "chacrinha",
+      "carnaval",
+      "prevencao"
+    ]
   },
   {
     "id": "song6",
-    "title": "Ideologia",
+    "title": "Ideologia [Ideology]",
     "artist": "Roberto Frejat e Cazuza",
     "year": 1988,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/song6.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=hfsxcebq5Rc", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A canção atemporal aborda um sentimento de descrença política, parcialmente impulsionado pelo frágil exercício da democracia na época e, ao mesmo tempo, dialoga com uma ferida narcísica de uma geração intensa, cujos rápidos avanços comportamentais, sexuais e sociais foram contidos pela epidemia da aids. Um verso, em especial, evidencia um dos muitos impactos da síndrome: “meu prazer agora é risco de vida”. O ato sexual começou a ser associado ao perigo e a intimidade e o prazer agora tinham um lado sombrio e ameaçador, o que acabava aumentando a solidão dos indivíduos, isolados em seu próprio corpo. A liberdade sexual que a contracultura pregava tinha chegado ao fim, não existia mais o mote “sexo, drogas e rock’n’roll”, nem o sonho de revolução. Famoso por abalar os alicerces da sociedade moralista e conservadora, na canção, Cazuza fala abertamente sobre sexo e o vírus, dando voz a todos os medos que assombravam a sua geração. </p>",
-    "analysisHtml": "<p>IDEOLOGIA. Intérprete: Cazuza. Compositor: Cazuza e R. Frejat. In: IDEOLOGIA. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado A, faixa 1 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=hfsxcebq5Rc",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A canção atemporal aborda um sentimento de descrença política, parcialmente impulsionado pelo frágil exercício da democracia na época e, ao mesmo tempo, dialoga com uma ferida narcísica de uma geração intensa, cujos rápidos avanços comportamentais, sexuais e sociais foram contidos pela epidemia da aids. Um verso, em especial, evidencia um dos muitos impactos da síndrome: “meu prazer agora é risco de vida”. O ato sexual começou a ser associado ao perigo e a intimidade e o prazer agora tinham um lado sombrio e ameaçador, o que acabava aumentando a solidão dos indivíduos, isolados em seu próprio corpo. A liberdade sexual que a contracultura pregava tinha chegado ao fim, não existia mais o mote “sexo, drogas e rock’n’roll”, nem o sonho de revolução. Famoso por abalar os alicerces da sociedade moralista e conservadora, na canção, Cazuza fala abertamente sobre sexo e o vírus, dando voz a todos os medos que assombravam a sua geração. </p>",
+      "en": "<p>This timeless song speaks of a feeling of political disbelief, stemming from the fragile exercise of democracy at the time, and gives voice to a narcissistic wound of an intense generation, whose rapid behavioral, sexual, and social advances were curtailed by the AIDS epidemic. One verse in particular highlights one of the many impacts of the syndrome: \"my pleasure is now a risk of life.\" Sex began to be associated with danger, and intimacy and pleasure now had a dark and threatening side, which ended up increasing the loneliness of individuals, isolated in their own bodies. The sexual freedom preached by the counterculture had come to an end; there was no more \"sex, drugs, and rock 'n' roll,\" nor the dream of revolution. Famous for shaking the foundations of moralistic and conservative society, in the song Cazuza speaks openly about sex and the virus, giving voice to all the fears that haunted his generation.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>IDEOLOGIA. Intérprete: Cazuza. Compositor: Cazuza e R. Frejat. In: IDEOLOGIA. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado A, faixa 1 (4 min).</p>",
+      "en": "<p>IDEOLOGIA. Performer: Cazuza. Composers: Cazuza and R. Frejat. In: IDEOLOGIA. Performer: Cazuza. Rio de Janeiro: Philips, 1988. 1 vinyl record, side A, track 1 (4 min).</p>"
+    },
     "transcriptHtml": "<p>Meu partido<br>É um coração partido<br>E as ilusões<br>Estão todas perdidas</p><p>Os meus sonhos<br>Foram todos vendidos<br>Tão barato que eu nem acredito<br>Ah, eu nem acredito</p><p>Que aquele garoto que ia mudar o mundo<br>Mudar o mundo<br>Frequenta agora<br>As festas do Grand Monde</p><p>Meus heróis<br>Morreram de overdose<br>Meus inimigos<br>Estão no poder</p><p>Ideologia<br>Eu quero uma pra viver<br>Ideologia<br>Eu quero uma pra viver</p><p>O meu prazer<br>Agora é risco de vida<br>Meu sex and drugs<br>Não tem nenhum rock 'n' roll</p><p>Eu vou pagar<br>A conta do analista<br>Pra nunca mais ter que saber quem eu sou<br>Ah, saber quem eu sou</p><p>Pois aquele garoto que ia mudar o mundo<br>Mudar o mundo<br>Agora assiste a tudo em cima do muro<br>Em cima do muro</p><p>Meus heróis<br>Morreram de overdose, é<br>Meus inimigos<br>Estão no poder</p><p>Ideologia<br>Eu quero uma pra viver<br>Ideologia<br>Pra viver</p><p>Pois aquele garoto que ia mudar o mundo<br>Mudar o mundo<br>Agora assiste a tudo em cima do muro<br>Em cima do muro</p><p>Meus heróis<br>Morreram de overdose<br>Meus inimigos<br>Estão no poder</p><p>Ideologia<br>Eu quero uma pra viver<br>Ideologia<br>Eu quero uma pra viver</p><p>Ideologia<br>Pra viver<br>Ideologia<br>Eu quero uma pra viver</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=hfsxcebq5Rc" } ],
-    "tags": ["anos-80", "rock", "cazuza", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=hfsxcebq5Rc"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "cazuza",
+      "aids"
+    ]
   },
   {
     "id": "song7",
-    "title": "Boas novas",
+    "title": "Boas novas [Good News]",
     "artist": "Cazuza",
     "year": 1988,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/cazuza.png",
-    "preview": { "src": "https://www.youtube.com/watch?v=IgjTMjMPGh0", "durationSec": 120 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A canção atemporal aborda um sentimento de descrença política, parcialmente impulsionado pelo frágil exercício da democracia na época e, ao mesmo tempo, dialoga com uma ferida narcísica de uma geração intensa, cujos rápidos avanços comportamentais, sexuais e sociais foram contidos pela epidemia da aids. Um verso, em especial, evidencia um dos muitos impactos da síndrome: “meu prazer agora é risco de vida”. O ato sexual começou a ser associado ao perigo e a intimidade e o prazer agora tinham um lado sombrio e ameaçador, o que acabava aumentando a solidão dos indivíduos, isolados em seu próprio corpo. A liberdade sexual que a contracultura pregava tinha chegado ao fim, não existia mais o mote “sexo, drogas e rock’n’roll”, nem o sonho de revolução. Famoso por abalar os alicerces da sociedade moralista e conservadora, na canção, Cazuza fala abertamente sobre sexo e o vírus, dando voz a todos os medos que assombravam a sua geração. </p>",
-    "analysisHtml": "<p>BOAS novas. Intérprete e compositor: Cazuza. In: IDEOLOGIA. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado A, faixa 2 (2 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=IgjTMjMPGh0",
+      "durationSec": 120
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A canção atemporal aborda um sentimento de descrença política, parcialmente impulsionado pelo frágil exercício da democracia na época e, ao mesmo tempo, dialoga com uma ferida narcísica de uma geração intensa, cujos rápidos avanços comportamentais, sexuais e sociais foram contidos pela epidemia da aids. Um verso, em especial, evidencia um dos muitos impactos da síndrome: “meu prazer agora é risco de vida”. O ato sexual começou a ser associado ao perigo e a intimidade e o prazer agora tinham um lado sombrio e ameaçador, o que acabava aumentando a solidão dos indivíduos, isolados em seu próprio corpo. A liberdade sexual que a contracultura pregava tinha chegado ao fim, não existia mais o mote “sexo, drogas e rock’n’roll”, nem o sonho de revolução. Famoso por abalar os alicerces da sociedade moralista e conservadora, na canção, Cazuza fala abertamente sobre sexo e o vírus, dando voz a todos os medos que assombravam a sua geração. </p>",
+      "en": "<p>\"I saw the face of death and it was alive,\" says Cazuza in \"Boas novas\", a title that refers to the sensationalist headlines of the newspapers at the time. Here, the singer denounces not only physiological death, but also \"death in life,\" the loss of civil rights suffered by people after being diagnosed with HIV.</p><p>Like Cazuza, Brazilian writer and sociologist Herbert Daniel stated in his book \"Vida antes da morte\" (Life Before Death), published in 1989, that saying \"I am alive\" as a person living with HIV is a political act. In both cases, art is used to highlight the need to fight for the rights of people who are socially marginalized because of stigma and prejudice.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>BOAS novas. Intérprete e compositor: Cazuza. In: IDEOLOGIA. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado A, faixa 2 (2 min).</p>",
+      "en": "<p>BOAS novas. Performer and composer: Cazuza. In: IDEOLOGIA. Performer: Cazuza. Rio de Janeiro: Philips, 1988. 1 vinyl record, side A, track 2 (2 min).</p>"
+    },
     "transcriptHtml": "<p>Poetas e loucos aos poucos<br>Cantores do porvir<br>E mágicos das frases<br>Endiabradas sem mel<br>Trago boas novas<br>Bobagens num papel<br>Balões incendiados<br>Coisas que caem do céu<br>Sem mais nem porquê</p><p>Queria um dia no mundo<br>Poder te mostrar o meu<br>Talento pra loucura<br>Procurar longe do peito<br>Eu sempre fui perfeito<br>Pra fazer discursos longos<br>Discursos longos<br>Sobre o que não fazer<br>Que é que eu vou fazer?</p><p>Senhoras e senhores<br>Trago boas novas<br>Eu vi a cara da morte<br>E ela estava viva viva!<br>Eu vi a cara da morte<br>E ela estava viva - viva!</p><p>Direi milhares de metáforas rimadas<br>E farei<br>Das tripas coração<br>Do medo, minha oração<br>Pra não sei que Deus H<br>Da hora da partida<br>Na hora da partida<br>A tiros de vamos pra vida<br>Então, vamos pra vida</p><p>Senhoras e senhores<br>Trago boas novas<br>Eu vi a cara da morte<br>E ela estava viva<br>Eu vi a cara da morte<br>E ela estava viva viva!</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=IgjTMjMPGh0" } ],
-    "tags": ["anos-80", "rock", "cazuza", "aids", "direitos"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=IgjTMjMPGh0"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "cazuza",
+      "aids",
+      "direitos"
+    ]
   },
   {
     "id": "song8",
-    "title": "A cura",
+    "title": "A cura [The Cure]",
     "artist": "Lulu Santos",
     "year": 1988,
-    "genres": ["rock", "pop"],
+    "genres": [
+      "rock",
+      "pop"
+    ],
     "cover": "/assets/covers/song7.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=BXUqiiygC5Y", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Em meio ao alto número de mortes decorrentes da aids no final da década de 80, a canção “A cura”, de Lulu Santos, surgiu como um poderoso catalisador de esperança e um hino de resistência. O período era marcado pela emergência de redes de solidariedade e pelo fortalecimento de organizações não governamentais.</p><p>Nesse cenário de mobilização coletiva, que buscava ativamente por tratamentos adequados (como o AZT), a música sintetizou e amplificou o sentimento de chegada de dias melhores e a possibilidade de superação. “A cura” é uma ode à vida que evita citar a morte. Com verbos no futuro, a música utiliza de uma perspectiva positiva de certeza de recuperação e triunfo. </p>",
-    "analysisHtml": "<p>A CURA. Intérprete e compositor: Lulu Santos. In: TODA forma de amor. Intérprete: Lulu Santos. Rio de Janeiro: RCA Victor, 1988. 1 disco vinil, lado B, faixa 2 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=BXUqiiygC5Y",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Em meio ao alto número de mortes decorrentes da aids no final da década de 80, a canção “A cura”, de Lulu Santos, surgiu como um poderoso catalisador de esperança e um hino de resistência. O período era marcado pela emergência de redes de solidariedade e pelo fortalecimento de organizações não governamentais.</p><p>Nesse cenário de mobilização coletiva, que buscava ativamente por tratamentos adequados (como o AZT), a música sintetizou e amplificou o sentimento de chegada de dias melhores e a possibilidade de superação. “A cura” é uma ode à vida que evita citar a morte. Com verbos no futuro, a música utiliza de uma perspectiva positiva de certeza de recuperação e triunfo. </p>",
+      "en": "<p>Amidst the high number of deaths from AIDS in the late 1980s, Lulu Santos' song \"A cura\" emerged as a powerful catalyst for hope and an anthem of resistance. The period was marked by the emergence of solidarity networks and the strengthening of non-governmental organizations.</p><p>In this context of collective mobilization, which actively sought adequate treatments (such as AZT), the song synthesized and amplified the feeling that better days were coming and that it was possible to overcome the disease. \"A cura\" is an ode to life that avoids mentioning death. With verbs in the future tense, the song conveys a positive perspective of recovery and triumph.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>A CURA. Intérprete e compositor: Lulu Santos. In: TODA forma de amor. Intérprete: Lulu Santos. Rio de Janeiro: RCA Victor, 1988. 1 disco vinil, lado B, faixa 2 (4 min).</p>",
+      "en": "<p>A CURA. Performer and composer: Lulu Santos. In: TODA forma de amor. Performer: Lulu Santos. Rio de Janeiro: RCA Victor, 1988. 1 vinyl record, side B, track 2 (4 min).</p>"
+    },
     "transcriptHtml": "<p>Existirá, em todo porto tremulará<br>A velha bandeira da vida<br>Acenderá, todo farol iluminará<br>Uma ponta de esperança<br>E se virá, será quando menos se esperar<br>Da onde ninguém imagina<br>Demolirá toda certeza vã<br>Não sobrará pedra sobre pedra</p><p>Enquanto isso, não nos custa insistir<br>Na questão do desejo, não deixar se extinguir<br>Desafiando de vez a noção<br>Na qual se crê que o inferno é aqui</p><p>Existirá<br>E toda raça então experimentará<br>Para todo mal, a cura</p><p>Existirá, em todo porto se hasteará<br>A velha bandeira da vida<br>Acenderá, todo farol iluminará<br>Uma ponta de esperança<br>E se virá, será quando menos se esperar<br>Da onde ninguém imagina<br>Demolirá toda certeza vã<br>Não sobrará pedra sobre pedra</p><p>Enquanto isso, não nos custa insistir<br>Na questão do desejo, não deixar se extinguir<br>Desafiando de vez a noção<br>Na qual se crê que o inferno é aqui</p><p>Existirá<br>E toda raça então experimentará<br>Para todo mal, a cura</p><p>Enquanto isso, não nos custa insistir<br>Na questão do desejo, não deixar se extinguir<br>Desafiando de vez a noção<br>Na qual se crê que o inferno é aqui</p><p>Existirá<br>E toda raça então experimentará<br>Para todo mal, a cura</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=BXUqiiygC5Y" } ],
-    "tags": ["anos-80", "rock", "lulu-santos", "esperanca"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=BXUqiiygC5Y"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "lulu-santos",
+      "esperanca"
+    ]
   },
   {
     "id": "song9",
-    "title": "O tempo não para",
+    "title": "O tempo não para [Time Doesn’t Stop]",
     "artist": "Cazuza e Arnaldo Brandão",
     "year": 1988,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/cazuza.png",
-    "preview": { "src": "/assets/audio/cazuza_o_tempo_não_para.mp3", "durationSec": 205 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Composta na primeira pessoa do singular, por meio da figura de um “eu lírico” que se funde e confunde com a própria imagem pública de Cazuza, a música contém subjetividades da aids, notadamente as homoeróticas. A obra nomeava a mágoa, o cansaço e o marasmo enfrentado pelo país no momento em que foi lançada. Cazuza transforma sua experiência pessoal com o HIV e o preconceito em uma crítica social direta e poderosa, ao utilizar imagens marcantes para expressar tanto sua dor quanto sua disposição de enfrentar as adversidades. A obra faz uma crítica explícita à corrupção e à hipocrisia das elites brasileiras e denuncia o abismo entre o discurso e a realidade social do país.</p>",
-    "analysisHtml": "<p>O TEMPO não para. Intérprete: Cazuza. Compositores: Cazuza e A. Brandão. In: O TEMPO não para. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado B, faixa 1 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=6tnc-rBZJL4",
+      "durationSec": 205
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Composta na primeira pessoa do singular, por meio da figura de um “eu lírico” que se funde e confunde com a própria imagem pública de Cazuza, a música contém subjetividades da aids, notadamente as homoeróticas. A obra nomeava a mágoa, o cansaço e o marasmo enfrentado pelo país no momento em que foi lançada. Cazuza transforma sua experiência pessoal com o HIV e o preconceito em uma crítica social direta e poderosa, ao utilizar imagens marcantes para expressar tanto sua dor quanto sua disposição de enfrentar as adversidades. A obra faz uma crítica explícita à corrupção e à hipocrisia das elites brasileiras e denuncia o abismo entre o discurso e a realidade social do país.</p>",
+      "en": "<p>Composed in the first person, through the figure of a \"lyrical self\" that merges and blends with Cazuza's own public image, the song contains subjectivities of AIDS, notably homoerotic ones. The work named the grief, fatigue, and stagnation faced by the country at the time it was released.</p><p>Cazuza transforms his personal experience with HIV and prejudice into direct and powerful social criticism, using striking images to express both his pain and his willingness to face adversity. The song explicitly criticizes the corruption and hypocrisy of the Brazilian elite and denounces the gap between rhetoric and social reality in the country.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>O TEMPO não para. Intérprete: Cazuza. Compositores: Cazuza e A. Brandão. In: O TEMPO não para. Intérprete: Cazuza. Rio de Janeiro: Philips, 1988. 1 disco vinil, lado B, faixa 1 (4 min).</p>",
+      "en": "<p>O TEMPO não para. Performer: Cazuza. Composers: Cazuza and A. Brandão. In: O TEMPO não para. Performer: Cazuza. Rio de Janeiro: Philips, 1988. 1 vinyl record, side B, track 1 (4 min).</p>"
+    },
     "transcriptHtml": "<p>Disparo contra o sol<br>Sou forte e sou por acaso<br>Minha metralhadora cheia de mágoas<br>Eu sou um cara<br>Cansado de correr<br>Na direção contrária<br>Sem pódio de chegada ou beijo de namorada<br>Eu sou mais um cara</p><p>Mas se você achar que eu tô derrotado<br>Saiba que ainda estão rolando os dados<br>Porque o tempo, o tempo não para</p><p>Dias sim, dias não<br>Eu vou sobrevivendo sem um arranhão<br>Da caridade de quem me detesta</p><p>A tua piscina tá cheia de ratos<br>Tuas ideias não correspondem aos fatos<br>O tempo não para<br>Eu vejo o futuro repetir o passado<br>Eu vejo um museu de grandes novidades<br>O tempo não para<br>Não para, não, não para</brp><p>Reddy Allor</p><p>Eu não tenho data pra comemorar<br>Às vezes os meus dias são de par em par<br>Procurando agulha num palheiro<br>Nas noites de frio é melhor nem nascer<br>Nas de calor se escolhe é matar ou morrer<br>E assim nos tornamos brasileiros</p><p>Te chamam de ladrão, de bicha, maconheiro<br>Transformam o país inteiro num puteiro<br>Pois assim se ganha mais dinheiro</p><p>A tua piscina tá cheia de ratos<br>Tuas ideias não correspondem aos fatos<br>O tempo não para<br>Eu vejo o futuro repetir o passado<br>Eu vejo um museu de grandes novidades<br>O tempo não para<br>Não para, não, não para (não)</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=6tnc-rBZJL4" } ],
-    "tags": ["anos-80", "rock", "cazuza", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=6tnc-rBZJL4"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "cazuza",
+      "aids"
+    ]
   },
   {
     "id": "song10",
-    "title": "Cobaias de Deus",
+    "title": "Cobaias de Deus [Guinea Pigs of God]",
     "artist": "Cazuza e Angela Ro Ro",
     "year": 1989,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/song10.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=IG1plvg-kP4", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Essa é uma das canções mais marcantes da História Cantada da Aids. Ao explorar o paradoxo entre dois princípios essenciais da existência, Cazuza reafirma a vida diante da morte — não apenas a morte inevitável, inerente à condição humana, mas também a morte civil imposta pelo estigma associado ao diagnóstico de HIV.</p>",
-    "analysisHtml": "<p>COBAIAS de Deus. Intérprete: Cazuza. Compositores: Cazuza e A. Ro Ro. In: BURGUESIA. Intérprete: Cazuza. Rio de Janeiro: PolyGram/Universal Music, 1989. 1 disco vinil, disco 2, lado A, faixa 1 (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=IG1plvg-kP4",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Essa é uma das canções mais marcantes da História Cantada da Aids. Ao explorar o paradoxo entre dois princípios essenciais da existência, Cazuza reafirma a vida diante da morte — não apenas a morte inevitável, inerente à condição humana, mas também a morte civil imposta pelo estigma associado ao diagnóstico de HIV.</p>",
+      "en": "<p>This is one of the most remarkable songs in the \"Sung History of AIDS.\" By exploring the paradox between two essential principles of existence, Cazuza reaffirms life in the face of death—not only the inevitable death inherent to human condition, but also the civil death imposed by the stigma associated with an HIV diagnosis.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>COBAIAS de Deus. Intérprete: Cazuza. Compositores: Cazuza e A. Ro Ro. In: BURGUESIA. Intérprete: Cazuza. Rio de Janeiro: PolyGram/Universal Music, 1989. 1 disco vinil, disco 2, lado A, faixa 1 (3 min).</p>",
+      "en": "<p>COBAIAS de Deus. Performer: Cazuza. Composers: Cazuza and A. Ro Ro. In: BURGUESIA. Performer: Cazuza. Rio de Janeiro: PolyGram/Universal Music, 1989. 1 vinyl record, disc 2, side A, track 1 (3 min).</p>"
+    },
     "transcriptHtml": "<p>Se você quer saber como eu me sinto<br>Vá a um laboratório ou um labirinto<br>Seja atropelado por esse trem da morte<br>Vá ver as cobaias de Deus<br>Andando na rua pedindo perdão<br>Vá a uma igreja qualquer<br>Pois lá se desfazem em sermão</p><p>Me sinto uma cobaia, um rato enorme<br>Nas mãos de Deus mulher<br>De um Deus de saia<br>Cagando e andando<br>Vou ver o ET<br>Ou vir um cantor de blues<br>Em outra encarnação</p><p>Nós, as cobaias de Deus<br>Nós somos cobaias de Deus<br>Nós somos as cobaias de Deus</p><p>Me tire dessa jaula, irmão, não sou macaco<br>Desse hospital maquiavélico<br>Meu pai e minha mãe, eu estou com medo<br>Porque eles vão deixar a sorte me levar<br>Você vai me ajudar, traga a garrafa<br>Estou desmilingüido, cara de boi lavado<br>Traga uma corda, irmão (irmão, acorda!)</p><p>Nós, as cobaias, vivemos muito sós<br>Por isso, Deus, tem pena, e nos põe na cadeia<br>E nos faz cantar, dentro de uma cadeia<br>E nos põe numa clínica, e nos faz voar</p><p>Nós, as cobaias de Deus<br>Nós somos cobaias de Deus<br>Nós somos as cobaias de Deus<br>Nós, as cobaias de Deus<br>Nós somos cobaias de Deus<br>Nós somos as cobaias de Deus</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=IG1plvg-kP4" } ],
-    "tags": ["anos-80", "rock", "cazuza", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=IG1plvg-kP4"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "rock",
+      "cazuza",
+      "aids"
+    ]
   },
   {
     "id": "song11",
-    "title": "Aids, pop, repressão",
+    "title": "Aids, pop, repressão [AIDS, pop, repression]",
     "artist": "Ratos de Porão",
     "year": 1989,
-    "genres": ["punk", "hardcore"],
+    "genres": [
+      "punk",
+      "hardcore"
+    ],
     "cover": "/assets/covers/song11.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=tMQjAXiS67o", "durationSec": 60 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A música retrata o clima de medo e repressão social da época, marcado pela epidemia de aids e pela criminalização das drogas, e faz críticas à transformação do rock brasileiro nos anos 1980, que, segundo a banda, perdeu sua autenticidade ao se tornar um produto comercial. As críticas se estenderam à cultura jovem pelo esvaziamento da simbologia de liberdade e rebeldia e assimilação pelo mercado. Como outras músicas da época, a obra reúne os principais elementos que marcaram a década e questiona o preço pago por uma geração diante da repressão e da perda de ideais.</p>",
-    "analysisHtml": "<p>AIDS, pop, repressão. Intérpretes e compositores: Ratos de Porão. In: BRASIL. Intérpretes: Ratos de Porão. São Paulo: Roadrunner Records, 1989. 1 disco vinil, lado A, faixa 3 (1 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=tMQjAXiS67o",
+      "durationSec": 60
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A música retrata o clima de medo e repressão social da época, marcado pela epidemia de aids e pela criminalização das drogas, e faz críticas à transformação do rock brasileiro nos anos 1980, que, segundo a banda, perdeu sua autenticidade ao se tornar um produto comercial. As críticas se estenderam à cultura jovem pelo esvaziamento da simbologia de liberdade e rebeldia e assimilação pelo mercado. Como outras músicas da época, a obra reúne os principais elementos que marcaram a década e questiona o preço pago por uma geração diante da repressão e da perda de ideais.</p>",
+      "en": "<p>The song portrays the climate of fear and social repression of the time, marked by the AIDS epidemic and the criminalization of drugs, and criticizes the transformation of Brazilian rock in the 1980s, which, according to the band, lost its authenticity by becoming a commercial product. The criticism extended to youth culture for the emptying of the symbolism of freedom and rebellion and its assimilation by the market. Like other songs of the time, the work brings together the main elements that marked the decade, and questions the price paid by a generation in the face of repression and the loss of ideals.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>AIDS, pop, repressão. Intérpretes e compositores: Ratos de Porão. In: BRASIL. Intérpretes: Ratos de Porão. São Paulo: Roadrunner Records, 1989. 1 disco vinil, lado A, faixa 3 (1 min).</p>",
+      "en": "<p>AIDS, pop, repressão. Performers and composers: Ratos de Porão. In: BRASIL. Performers: Ratos de Porão. São Paulo: Roadrunner Records, 1989. 1 vinyl record, side A, track 3 (1 min).</p>"
+    },
     "transcriptHtml": "<p><p>O rock brasileiro é uma farsa comercial<br>O sexo é apenas uma forma de morrer<br>As drogas representam um caso policial<br>Aquela antiga frase, não dá mais para falar</brp><p>Os tempos mudaram, agora é o fim<br>Um punk vira crente pra pedir a salvação<br>Emborracha o danado para não se infectar<br>Aquela coisa boa, você nunca vai achar</brp><p>Sexo, drogas, rock 'n' roll<br>Quem está nascendo agora, isso não vai conhecer<br>Temos que nos proteger<br>Os prazeres dessa vida, já viraram maldição<br>AIDS, pop, repressão<br>O que é que eu fiz para merecer isso?</p><p>O rock brasileiro é uma farsa comercial<br>O sexo é apenas uma forma de morrer<br>As drogas representam um caso policial<br>Aquela antiga frase, não dá mais para falar</p></p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=tMQjAXiS67o" } ],
-    "tags": ["anos-80", "punk", "ratos-de-porao", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=tMQjAXiS67o"
+      }
+    ],
+    "tags": [
+      "anos-80",
+      "punk",
+      "ratos-de-porao",
+      "aids"
+    ]
   },
   {
     "id": "song12",
     "title": "Rubens",
     "artist": "Paulinho Moska e Mario Manga",
     "year": 1990,
-    "genres": ["mpb", "pop"],
+    "genres": [
+      "mpb",
+      "pop"
+    ],
     "cover": "/assets/covers/song12.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=qcEb_0zUb0U", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>'Rubens' é um exemplo de canção que escancara a construção moral em torno da epidemia da aids. A letra explícita acompanha uma relação afetiva e sexual entre dois homens, que precisam lidar com a paixão e o desejo de forma escondida, pois “a sociedade não gosta, o pessoal acha estranho”. Nessa canção, o julgamento de amigos e familiares pela relação de dois homens também é atravessado pela nova doença – a aids. </p>",
-    "analysisHtml": "<p>RUBENS. Intérprete: Cássia Eller. Compositores: P. Moska e M. Manga. In: CÁSSIA Eller. Intérprete: Cássia Eller. Rio de Janeiro: PolyGram/Universal Music, 1990. 1 disco vinil, lado A, faixa 2 (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=qcEb_0zUb0U",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>'Rubens' é um exemplo de canção que escancara a construção moral em torno da epidemia da aids. A letra explícita acompanha uma relação afetiva e sexual entre dois homens, que precisam lidar com a paixão e o desejo de forma escondida, pois “a sociedade não gosta, o pessoal acha estranho”. Nessa canção, o julgamento de amigos e familiares pela relação de dois homens também é atravessado pela nova doença – a aids. </p>",
+      "en": "<p>\"Rubens\" is an example of a song that lays bare the moral construct surrounding the AIDS epidemic. The explicit lyrics follow an affective and sexual relationship between two men, who must deal with passion and desire in secret because \"society doesn't like it, people find it strange.\" In this song, the judgment of friends and family regarding the relationship between two men is also influenced by the new disease – AIDS.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>RUBENS. Intérprete: Cássia Eller. Compositores: P. Moska e M. Manga. In: CÁSSIA Eller. Intérprete: Cássia Eller. Rio de Janeiro: PolyGram/Universal Music, 1990. 1 disco vinil, lado A, faixa 2 (3 min).</p>",
+      "en": "<p>RUBENS. Performer: Cássia Eller. Composers: P. Moska and M. Manga. In: CÁSSIA Eller. Performer: Cássia Eller. Rio de Janeiro: PolyGram/Universal Music, 1990. 1 vinyl record, side A, track 2 (3 min).</p>"
+    },
     "transcriptHtml": "<p><p>Eu nunca quis te dizer<br>Sempre te achei bacaninha<br>O tempo todo sonhando<br>Com a tua pica na minha</p><p>O teu rostinho bonito<br>O jeito diferentão<br>De olhar no olho da gente<br>E de criar confusão</p><p>O teu andar malandrinho<br>O meu cabelo em pé<br>O teu cheirinho gostoso<br>A minha vida de ré-é</p><p>Você me dando uma bola<br>E eu perdido na escola<br>Essa fissura no ar<br>Parece que eu vô correndo<br>Sem vontade de andar</p><p>Quero te apertar<br>Quero te morder,me dá<br>Quero mas não posso, não, porque<br>Rubens! Não dá!<br>A gente é homem<br>O povo vai estranhar<br>Rubens! Para de rir menino<br>Se a tua família descobre<br>Eles vão querer nos engolir</p><p>A sociedade não gosta<br>O pessoal acha estranho<br>Nós dois brincando de médico<br>Nós dois com esse tamanho</p><p>E com essa nova doença<br>O mundo todo na crença<br>Que tudo isso vai parar<br>E a gente continuando<br>Deixando o mundo pensar</p><p>Minha mãe teria um ataque<br>Teu pai,uma paralisia<br>Se por acaso soubessem<br>Que a gente transou um dia</p><p>Nossos amigos chorando<br>A vizinhança falando<br>O mundo todo em prece<br>E quando a gente passeia<br>A gente só esquece</p><p>Quero te apertar<br>Quero te morder, bicha<br>Só que eu sinto uma<br>Dúvida no ar<br>Rubens! Será que dá?<br>A gente</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=qcEb_0zUb0U" } ],
-    "tags": ["anos-90", "mpb", "cassia-eller", "homossexualidade"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=qcEb_0zUb0U"
+      }
+    ],
+    "tags": [
+      "anos-90",
+      "mpb",
+      "cassia-eller",
+      "homossexualidade"
+    ]
   },
   {
     "id": "song13",
-    "title": "Black or white/Americanos",
+    "title": "Black or white/Americanos [Black or white/Americans]",
     "artist": "Caetano Veloso",
     "year": 1992,
-    "genres": ["mpb", "pop"],
+    "genres": [
+      "mpb",
+      "pop"
+    ],
     "cover": "/assets/covers/song13.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=6lzPLHzjWhQ", "durationSec": 180 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Caetano Veloso foi um dos artistas brasileiros que passaram a ser porta-vozes e autoridades midiáticas pelo fim do estigma, da discriminação e da desinformação que rondavam as pessoas vivendo com HIV ou aids. É nesse cenário que ele declama, após a execução de “Black or white”, “Americanos”. A música consiste em um discurso em prol da igualdade social e menciona a possível primeira pessoa com aids no Brasil, as primeiras mobilizações realizadas no país, as instituições sociais que se opunham às condutas conservadoras da igreja católica, da gestão pública e classe médica em torno da prevenção ao HIV.</p>",
-    "analysisHtml": "<p>BLACK or white/Americanos. Intérprete: Caetano Veloso. Compositor: M. Jackson. In: CIRCULADÔ ao vivo. Intérprete: Caetano Veloso e outros. Rio de Janeiro: PolyGram/Universal Music, 1992. 1 disco vinil, lado A, faixa 2 (3 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=6lzPLHzjWhQ",
+      "durationSec": 180
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Caetano Veloso foi um dos artistas brasileiros que passaram a ser porta-vozes e autoridades midiáticas pelo fim do estigma, da discriminação e da desinformação que rondavam as pessoas vivendo com HIV ou aids. É nesse cenário que ele declama, após a execução de “Black or white”, “Americanos”. A música consiste em um discurso em prol da igualdade social e menciona a possível primeira pessoa com aids no Brasil, as primeiras mobilizações realizadas no país, as instituições sociais que se opunham às condutas conservadoras da igreja católica, da gestão pública e classe médica em torno da prevenção ao HIV.</p>",
+      "en": "<p>Caetano Veloso is one of the Brazilian artists who became spokespeople and media authorities for the end of the stigma, discrimination, and misinformation surrounding people living with HIV or AIDS. It is in this context that he recites \"Americanos\", after performing Michael Jackson's \"Black or White.\" The song consists of a speech in favor of social equality and mentions the possible first person with AIDS in Brazil, the initial mobilizations carried out in the country, and the social institutions that opposed the conservative positions of the Catholic Church, the government, and the medical profession regarding HIV prevention.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>BLACK or white/Americanos. Intérprete: Caetano Veloso. Compositor: M. Jackson. In: CIRCULADÔ ao vivo. Intérprete: Caetano Veloso e outros. Rio de Janeiro: PolyGram/Universal Music, 1992. 1 disco vinil, lado A, faixa 2 (3 min).</p>",
+      "en": "<p>BLACK or white/Americanos. Performer: Caetano Veloso. Composer: M. Jackson. In: CIRCULADÔ ao vivo. Performer: Caetano Veloso and others. Rio de Janeiro: PolyGram/Universal Music, 1992. 1 vinyl record, side A, track 2 (3 min).</p>"
+    },
     "transcriptHtml": "<p><p>I took my baby on a Saturday bang<br>Boy is that girl with you<br>Yes we're one and the same</p><p>Now I believe in miracles<br>And a miracle has happened tonight</p><p>But, if you're thinkin' about my baby<br>It don't matter if you're black or white</p><p>They print my message in the Saturday Sun<br>I had to tell them I ain't second to none</p><p>And I told about equality and it's true<br>Either you're wrong or you're right</p><p>But, if you're thinkin' about my baby<br>It don't matter if you're black or white</p><p>I am tired of this devil<br>I am tired of this stuff<br>I am tired of this business<br>Sew when the going gets rough<br>I ain't scared of your brother<br>I ain's scared of no sheets<br>I ain't scared of nobody<br>Girl when the goin' gets mean</p><p>Protection<br>For gangs, clubs, and nations<br>causing grief in human relations<br>It's a turf war on a global scale<br>I'd rather hear both sides of the tale<br>See, it's not about races<br>Just places<br>Faces<br>Where your blood comes from<br>Is were your space is<br>I've seen the bright get duller<br>I'm not going to spend my life being a color</p><p>Don't tell me you agree with me<br>When I saw you kicking dirt in my eye</p><p>But, if you're thinkin' about my baby<br>It don't matter if you're black or white</p><p>I said if you're thinkin' of being my baby<br>It don't matter if you're black or white</p><p>I said if you're thinkin' of being my brother<br>It don't matter if you're black or white</p><p>Ooh, ooh<br>Yea, yea, yea now<br>Ooh, ooh<br>Yea, yea, yea now</p><p>It's black, it's white<br>It's tough for them to get by<br>It's black, it's white, whoo</p></p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=6lzPLHzjWhQ" } ],
-    "tags": ["anos-90", "mpb", "caetano-veloso", "ativismo"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=6lzPLHzjWhQ"
+      }
+    ],
+    "tags": [
+      "anos-90",
+      "mpb",
+      "caetano-veloso",
+      "ativismo"
+    ]
   },
   {
     "id": "song14",
-    "title": "A Via Láctea",
+    "title": "A Via Láctea [The Milky Way]",
     "artist": "Renato Russo, Dado Villa-Lobos e Marcelo Bonfá",
     "year": 1996,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/song14.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=rvL05KRFEbA", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A canção reflete a situação de saúde de Renato Russo, que viria a falecer pouco tempo após a gravação devido a complicações da aids. “Via Láctea” sintetiza a tristeza e o pessimismo que Renato Russo sentia em seus últimos momentos. Sua letra reflete o sofrimento físico, como no verso “Hoje fiquei com febre a tarde inteira”, que pode ser interpretado como uma referência direta à aids, pois, na época, a febre alta e persistente era um sinal comum da doença, devido à rápida destruição do sistema imunológico pelo vírus.</p><p>Além do registro dos sintomas, a música é um retrato da melancolia e desespero do compositor, que expressava sentir-se “tão sozinho”. Em um ato de oposição à falsa esperança, o verso “Mas não me diga isso” rejeita o consolo superficial de que “Sempre existe uma luz”, revelando uma aceitação dolorosa de sua realidade. A canção soa como uma despedida, e no verso “Obrigado por pensar em mim”, Renato conversa com seus fãs em um último gesto de gratidão. </p>",
-    "analysisHtml": "<p>A VIA Láctea. Intérprete: Renato Russo. Compositores: R. Russo, M. Bonfá e D. Villa-Lobos. In: A TEMPESTADE ou o Livro dos Dias. Intérprete: Renato Russo. Rio de Janeiro: EMI, 1996. 1 disco vinil, lado B, faixa 1 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=rvL05KRFEbA",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A canção reflete a situação de saúde de Renato Russo, que viria a falecer pouco tempo após a gravação devido a complicações da aids. “Via Láctea” sintetiza a tristeza e o pessimismo que Renato Russo sentia em seus últimos momentos. Sua letra reflete o sofrimento físico, como no verso “Hoje fiquei com febre a tarde inteira”, que pode ser interpretado como uma referência direta à aids, pois, na época, a febre alta e persistente era um sinal comum da doença, devido à rápida destruição do sistema imunológico pelo vírus.</p><p>Além do registro dos sintomas, a música é um retrato da melancolia e desespero do compositor, que expressava sentir-se “tão sozinho”. Em um ato de oposição à falsa esperança, o verso “Mas não me diga isso” rejeita o consolo superficial de que “Sempre existe uma luz”, revelando uma aceitação dolorosa de sua realidade. A canção soa como uma despedida, e no verso “Obrigado por pensar em mim”, Renato conversa com seus fãs em um último gesto de gratidão. </p>",
+      "en": "<p>The song reflects Renato Russo's health situation, as he would die shortly after the recording due to complications from AIDS. \"A Via Láctea\" conveys the sadness and pessimism the singer felt in his final moments. Its lyrics reflect physical suffering, as in the verse \"Today I had a fever all afternoon,\" which can be interpreted as a direct reference to AIDS, since at the time, a high and persistent fever was a common sign of the disease, due to the rapid destruction of the immune system by the virus.</p><p>Besides suggesting the symptoms, the song is a portrait of the composer's melancholy and despair, who said he felt \"so alone.\" In opposition to false hope, the verse \"But don't tell me that\" rejects the superficial consolation that \"There's always a light,\" revealing a painful acceptance of his reality. The song sounds like a farewell, and in the verse \"Thank you for thinking of me,\" Renato speaks to his fans in a final gesture of gratitude.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>A VIA Láctea. Intérprete: Renato Russo. Compositores: R. Russo, M. Bonfá e D. Villa-Lobos. In: A TEMPESTADE ou o Livro dos Dias. Intérprete: Renato Russo. Rio de Janeiro: EMI, 1996. 1 disco vinil, lado B, faixa 1 (4 min).</p>",
+      "en": "<p>A VIA Láctea. Performer: Renato Russo. Composers: R. Russo, M. Bonfá, and D. Villa-Lobos. In: A TEMPESTADE ou o Livro dos Dias. Performer: Renato Russo. Rio de Janeiro: EMI, 1996. 1 vinyl record, side B, track 1 (4 min).</p>"
+    },
     "transcriptHtml": "<p><p>Quando tudo está perdido<br>Sempre existe um caminho<br>Quando tudo está perdido<br>Sempre existe uma luz</p><p>Mas não me diga isso</p><p>Hoje a tristeza não é passageira<br>Hoje fiquei com febre a tarde inteira<br>E quando chegar a noite<br>Cada estrela parecerá uma lágrima</p><p>Queria ser como os outros<br>E rir das desgraças da vida<br>Ou fingir estar sempre bem<br>Ver a leveza das coisas com humor</p><p>Mas não me diga isso</p><p>É só hoje e isso passa<br>Só me deixe aqui quieto isso passa<br>Amanhã é um outro dia, não é?</p><p>Eu nem sei porque me sinto assim<br>Vem de repente um anjo triste perto de mim</p><p>E essa febre que não passa<br>E meu sorriso sem graça<br>Não me dê atenção<br>Mas obrigado por pensar em mim</p><p>Quando tudo está perdido<br>Sempre existe uma luz<br>Quando tudo está perdido<br>Sempre existe um caminho</p><p>Quando tudo está perdido<br>Eu me sinto tão sozinho<br>Quando tudo está perdido<br>Não quero mais ser quem eu sou</p><p>Mas não me diga isso<br>Não me dê atenção<br>E obrigado por pensar em mim</p><p>Não me diga isso<br>Não me dê atenção<br>E obrigado por pensar em mim</p></p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=rvL05KRFEbA" } ],
-    "tags": ["anos-90", "rock", "renato-russo", "legiao-urbana", "aids"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=rvL05KRFEbA"
+      }
+    ],
+    "tags": [
+      "anos-90",
+      "rock",
+      "renato-russo",
+      "legiao-urbana",
+      "aids"
+    ]
   },
   {
     "id": "song15",
-    "title": "Projeto Red Hot + Rio",
+    "title": "Projeto Red Hot + Rio [Project Red Hot + Rio]",
     "artist": "Vários Artistas",
     "year": 1996,
-    "genres": ["bossa-nova", "eletronica"],
+    "genres": [
+      "bossa-nova",
+      "eletronica"
+    ],
     "cover": "/assets/covers/song15.jpeg",
-    "preview": { "src": "https://discografia.discosdobrasil.com.br/discos/red-hot-rio", "durationSec": 4200 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Na década de 1990, a Red Hot iniciou uma série de projetos focados na música e na cultura da América do Sul, bem como na arrecadação de fundos e na conscientização para resposta à epidemia de HIV e aids nessa parte do mundo. Em 1996 foi lançado o Red Hot + Rio. O sucesso do álbum veio do equilíbrio entre as canções clássicas de Tom Jobim e os ritmos contagiantes da bossa nova com a música eletrônica moderna. </p><p>O álbum foi fabricado e comercializado nos Estados Unidos, Canadá e Europa. Devido ao grande sucesso do álbum, ele teve uma continuação, o Rio2, focada no movimento Tropicália e em alguns de seus grandes artistas, como Caetano Veloso e Gilberto Gil. Em 2008, foi realizado um concerto com as músicas do álbum em Nova Iorque e os fundos arrecadados com o show beneficiaram projetos voltados aos cuidados com a aids.</p>",
-    "analysisHtml": "<p>RED Hot + Rio. [S. l.]: Antilles/Verve, 1996. 1 CD (70 min). Vários intérpretes e compositores.</p>",
+    "preview": {
+      "src": "https://discografia.discosdobrasil.com.br/discos/red-hot-rio",
+      "durationSec": 4200
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Na década de 1990, a Red Hot iniciou uma série de projetos focados na música e na cultura da América do Sul, bem como na arrecadação de fundos e na conscientização para resposta à epidemia de HIV e aids nessa parte do mundo. Em 1996 foi lançado o Red Hot + Rio. O sucesso do álbum veio do equilíbrio entre as canções clássicas de Tom Jobim e os ritmos contagiantes da bossa nova com a música eletrônica moderna. </p><p>O álbum foi fabricado e comercializado nos Estados Unidos, Canadá e Europa. Devido ao grande sucesso do álbum, ele teve uma continuação, o Rio2, focada no movimento Tropicália e em alguns de seus grandes artistas, como Caetano Veloso e Gilberto Gil. Em 2008, foi realizado um concerto com as músicas do álbum em Nova Iorque e os fundos arrecadados com o show beneficiaram projetos voltados aos cuidados com a aids.</p>",
+      "en": "<p>In the 1990s, Red Hot initiated a series of projects focused on South American music and culture, as well as fundraising and awareness campaigns to address the HIV and AIDS epidemic in that region of the world. Thus, in 1996, Red Hot + Rio was released. The album's success stemmed from the balance between classic Tom Jobim songs and the infectious rhythms of bossa nova with modern electronic music.</p><p>The album was recorded and marketed in the United States, Canada, and Europe. Due to the album's great success, it had a sequel, Rio2, focused on the Tropicália movement and on some of its major artists, such as Caetano Veloso and Gilberto Gil. In 2008, a concert featuring the album's songs was held in New York, and the funds raised from the show benefited projects focused on AIDS care.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>RED Hot + Rio. [S. l.]: Antilles/Verve, 1996. 1 CD (70 min). Vários intérpretes e compositores.</p>",
+      "en": "<p>RED Hot + Rio. [S. l.]: Antilles/Verve, 1996. 1 CD (70 min). Various performers and composers.</p>"
+    },
     "transcriptHtml": "<p></p>",
-    "sources": [ { "label": "Discografia", "url": "https://discografia.discosdobrasil.com.br/discos/red-hot-rio" } ],
-    "tags": ["anos-90", "bossa-nova", "beneficente", "red-hot"]
+    "sources": [
+      {
+        "label": "Discografia",
+        "url": "https://discografia.discosdobrasil.com.br/discos/red-hot-rio"
+      }
+    ],
+    "tags": [
+      "anos-90",
+      "bossa-nova",
+      "beneficente",
+      "red-hot"
+    ]
   },
   {
     "id": "song16",
-    "title": "O gosto do azedo",
+    "title": "O gosto do azedo [The Taste of Sour]",
     "artist": "Beto Lee e Rita Lee",
     "year": 1998,
-    "genres": ["rock", "pop"],
+    "genres": [
+      "rock",
+      "pop"
+    ],
     "cover": "/assets/covers/song16.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=bGTfsvTHdAg", "durationSec": 240 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A música é uma obra provocativa e intensa que explora temas como medo, vulnerabilidade e a ameaça invisível do HIV. A letra está repleta de metáforas que dão ao vírus uma forma personificada, transformando-o em uma entidade onipresente e perigosa. Essa ameaça silenciosa e implacável observa e afeta a vida das pessoas. Criada em um contexto de convívio com o vírus, a canção aponta que o HIV traz consequências marcantes para as pessoas infectadas. Alguns trechos estão ligados, inclusive, aos usos e consumos de efavirenz, um antirretroviral da época conhecido por seus efeitos colaterais de alucinação. </p>",
-    "analysisHtml": "<p>O GOSTO do azedo. Intérprete: Rita Lee. Compositores: B. Lee, R. Lee. In: ACÚSTICO MTV: Rita Lee. Intérprete: Rita Lee e outros. Rio de Janeiro: Universal Music, 1998. 1 CD, faixa 10 (4 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=bGTfsvTHdAg",
+      "durationSec": 240
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A música é uma obra provocativa e intensa que explora temas como medo, vulnerabilidade e a ameaça invisível do HIV. A letra está repleta de metáforas que dão ao vírus uma forma personificada, transformando-o em uma entidade onipresente e perigosa. Essa ameaça silenciosa e implacável observa e afeta a vida das pessoas. Criada em um contexto de convívio com o vírus, a canção aponta que o HIV traz consequências marcantes para as pessoas infectadas. Alguns trechos estão ligados, inclusive, aos usos e consumos de efavirenz, um antirretroviral da época conhecido por seus efeitos colaterais de alucinação. </p>",
+      "en": "<p>This provocative and intense song explores themes such as fear, vulnerability, and the invisible threat of HIV. The lyrics are full of metaphors that give the virus a personified form, making it an omnipresent and dangerous entity. This silent and relentless threat observes and affects people's lives. Created in a context of living with the virus, the song suggests that HIV brings significant consequences for infected people. Some passages are even linked to the use and consumption of efavirenz, an antiretroviral drug of the time known for its hallucinogenic side effects.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>O GOSTO do azedo. Intérprete: Rita Lee. Compositores: B. Lee, R. Lee. In: ACÚSTICO MTV: Rita Lee. Intérprete: Rita Lee e outros. Rio de Janeiro: Universal Music, 1998. 1 CD, faixa 10 (4 min).</p>",
+      "en": "<p>O GOSTO do azedo. Performer: Rita Lee. Composers: B. Lee, R. Lee. In: ACÚSTICO MTV: Rita Lee. Intérprete: Rita Lee and others. Rio de Janeiro: Universal Music, 1998. 1 CD, track 10 (4 min).</p>"
+    },
     "transcriptHtml": "<p>Para o sangue, sou o veneno<br>Eu mato, eu como, eu dreno<br>Para o resto da vida, sou extremo<br>Sou o gosto do azedo<br>A explosão de um torpedo<br>Contaminação do medo<br>Eu guardo o seu segredo<br>Sou o HIV que você não vê<br>Você não me vê<br>Mas eu vejo você<br>Sou a ponta da agulha<br>Tanto bato até que você fura<br>É a minha a sua captura<br>Sou dupla persona<br>Seu estado de coma<br>Sou o caos, sou a zona<br>Seu nocaute na lona<br>Sou o HIV que você não vê<br>Você não me vê<br>Mas eu vejo você<br>Eu sou o livre-arbítrio<br>Sem causa com efeito<br>Sua força é meu grande defeito<br>Sou a dor da tortura<br>Uma nova ditadura<br>Terminal da loucura<br>Sou o vírus sem cura<br>Sou o HIV que você não vê<br>Você não me vê<br>Mas eu vejo você</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=bGTfsvTHdAg" } ],
-    "tags": ["anos-90", "rock", "rita-lee", "aids", "tratamento"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=bGTfsvTHdAg"
+      }
+    ],
+    "tags": [
+      "anos-90",
+      "rock",
+      "rita-lee",
+      "aids",
+      "tratamento"
+    ]
   },
   {
     "id": "song17",
-    "title": "Cuidado",
+    "title": "Cuidado [Take Care] ",
     "artist": "Barão Vermelho",
     "year": 2004,
-    "genres": ["rock"],
+    "genres": [
+      "rock"
+    ],
     "cover": "/assets/covers/song17.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=Ew-Vnu9oyM8", "durationSec": 120 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>A obra se tornou intrinsecamente ligada ao contexto da epidemia de aids no Brasil. Utilizando o discurso hegemônico da época, trouxe um alerta e uma reflexão sobre os riscos e a vulnerabilidade da vida relacionados à necessidade de conscientização sobre a prevenção do HIV e as consequências da doença, inclusive com trechos estigmatizantes e discriminatórios. Mesmo sem citar o vírus explicitamente, capturou o clima de medo e a urgência do “cuidado” que a epidemia impôs à sociedade brasileira, especialmente ao público jovem do rock.</p>",
-    "analysisHtml": "<p>CUIDADO. Intérprete: Barão Vermelho. Compositores: R. Frejat, M. Rosauro e M. Barros. In: BARÃO Vermelho. Intérprete: Barão Vermelho. Rio de Janeiro: WEA, 2004. 1 CD, faixa 2 (2 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=Ew-Vnu9oyM8",
+      "durationSec": 120
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>A obra se tornou intrinsecamente ligada ao contexto da epidemia de aids no Brasil. Utilizando o discurso hegemônico da época, trouxe um alerta e uma reflexão sobre os riscos e a vulnerabilidade da vida relacionados à necessidade de conscientização sobre a prevenção do HIV e as consequências da doença, inclusive com trechos estigmatizantes e discriminatórios. Mesmo sem citar o vírus explicitamente, capturou o clima de medo e a urgência do “cuidado” que a epidemia impôs à sociedade brasileira, especialmente ao público jovem do rock.</p>",
+      "en": "<p>The work is intrinsically linked to the context of the AIDS epidemic in Brazil. Using the dominant discourse of the time, it brought a warning and a reflection on the risks and vulnerability of life related to the need for awareness about HIV prevention and the consequences of the disease, including passages that could be considered stigmatizing and discriminatory today. Even without explicitly mentioning the virus, it captured the climate of fear and the urgency of \"care\" that the epidemic imposed on Brazilian society, especially on the young rock audience.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>CUIDADO. Intérprete: Barão Vermelho. Compositores: R. Frejat, M. Rosauro e M. Barros. In: BARÃO Vermelho. Intérprete: Barão Vermelho. Rio de Janeiro: WEA, 2004. 1 CD, faixa 2 (2 min).</p>",
+      "en": "<p>CUIDADO. Performer: Barão Vermelho. Composers: R. Frejat, M. Rosauro e M. Barros. In: BARÃO Vermelho. Performer: Barão Vermelho. Rio de Janeiro: WEA, 2004. 1 CD, track 2 (2 min).</p>"
+    },
     "transcriptHtml": "<p>Que você come?<br>Que você bebe?<br>O que você fuma?<br>Que você compra?<br>Que você veste?<br>O que você usa?</p><p>Com quem você anda?<br>Com quem você vive?<br>Com quem você fica?<br>Com quem<br>Você se envolve?</p><p>Cuidado!<br>Cuidado!<br>Se não você dança...(2x)</p><p>E o flanelinha?<br>E o avião?<br>E a camisinha?<br>O que você fala<br>No celular?<br>Com quem você fica?<br>Com quem<br>Você se envolve?</p><p>Cuidado!<br>Cuidado!<br>Se não você dança...(2x)</p><p>E a bebedeira?<br>E a forma física?<br>E esse cara, aí do lado?<br>Com quem você anda?<br>Com quem você vive?<br>Quem você ama?<br>Com quem você se envolve?</p><p>Cuidado!<br>Cuidado!<br>Se não você dança...(2x)</p><p>Cuidado!<br>Cuidado!<br>Se não você dança...(2x)</p><p>O que você come, bebe,<br>Fuma, compra, veste e usa?<br>Se não você dança...(2x)</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=Ew-Vnu9oyM8" } ],
-    "tags": ["anos-2000", "rock", "barao-vermelho", "prevencao"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=Ew-Vnu9oyM8"
+      }
+    ],
+    "tags": [
+      "anos-2000",
+      "rock",
+      "barao-vermelho",
+      "prevencao"
+    ]
   },
   {
     "id": "song18",
-    "title": "Vamos vestir a camisinha, meu amor!",
+    "title": "Vamos vestir a camisinha, meu amor! [Let's put on a condom, honey!]",
     "artist": "Samba Enredo da Grande Rio",
     "year": 2004,
-    "genres": ["samba", "carnaval"],
+    "genres": [
+      "samba",
+      "carnaval"
+    ],
     "cover": "/assets/covers/song18.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=SC-ajl6JVY4", "durationSec": 300 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>O samba enredo da Acadêmicos da Grande Rio em 2004 é uma obra que transcende a celebração carnavalesca para abordar a conscientização sobre o uso de preservativos como forma de prevenção ao HIV e às infecções sexualmente transmissíveis e contribuir para a promoção da saúde sexual. A letra da música faz um apelo direto e alegre para que as pessoas se previnam durante as relações sexuais, utilizando preservativos. Para tornar a mensagem ainda mais direta, o samba faz menção a diversos grupos sociais, destacando que a prevenção é uma questão universal. </p>",
-    "analysisHtml": "<p>VAMOS vestir a camisinha, meu amor! (Grande Rio). Intérprete: Wander Pires. Compositores: M. Moreno, Mingau, Derê e D. Falcão. In: SAMBAS de Enredo 2004. Intérprete: vários. Rio de Janeiro: Gravasamba, 2004. 1 CD, faixa 3 (5 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=SC-ajl6JVY4",
+      "durationSec": 300
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>O samba enredo da Acadêmicos da Grande Rio em 2004 é uma obra que transcende a celebração carnavalesca para abordar a conscientização sobre o uso de preservativos como forma de prevenção ao HIV e às infecções sexualmente transmissíveis e contribuir para a promoção da saúde sexual. A letra da música faz um apelo direto e alegre para que as pessoas se previnam durante as relações sexuais, utilizando preservativos. Para tornar a mensagem ainda mais direta, o samba faz menção a diversos grupos sociais, destacando que a prevenção é uma questão universal. </p>",
+      "en": "<p>The samba theme of Acadêmicos da Grande Rio in 2004 is a work that transcends the Carnival celebration to address awareness about the use of condoms as a way to prevent HIV and sexually transmitted infections, and to contribute to the promotion of sexual health. The song's lyrics are a direct and joyful appeal for people to protect themselves during sexual relations by using condoms. To make the message even more direct, the samba mentions various social groups, highlighting that prevention is a universal issue.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>VAMOS vestir a camisinha, meu amor! (Grande Rio). Intérprete: Wander Pires. Compositores: M. Moreno, Mingau, Derê e D. Falcão. In: SAMBAS de Enredo 2004. Intérprete: vários. Rio de Janeiro: Gravasamba, 2004. 1 CD, faixa 3 (5 min).</p>",
+      "en": "<p>VAMOS vestir a camisinha, meu amor! (Grande Rio). Performer: Wander Pires. Composers: M. Moreno, Mingau, Derê, and D. Falcão. In: SAMBAS de Enredo 2004. Performers: various. Rio de Janeiro: Gravasamba, 2004. 1 CD, track 3 (5 min).</p>"
+    },
     "transcriptHtml": "<p>Fique sabendo: Amar é cuidar<br>Tem cheiro de amor no ar<br>Vamos vestir a camisinha, meu amor</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>A luz do Sol<br>Brilhou, se separou da Lua<br>O primeiro homem vai surgir<br>Provando das delícias do jardim</p><p>Colorindo o paraíso<br>Eu vi o charme e o sorriso da mulher<br>Meu bem, lições de amor<br>O povo do Oriente ensinou<br>No Éden a maldade da serpente assombrou<br>Seu veneno pelo mundo espalhou</p><p>Mata essa vontade louca, me beija na boca<br>Faz meu sonho real<br>Mas se quiser me ver e ter prazer carnal<br>É bom se proteger do mal</p><p>Mata essa vontade louca, me beija na boca<br>Faz meu sonho real<br>Mas se quiser me ver e ter prazer carnal<br>É bom se proteger do mal</p><p>Na busca de um novo amanhecer<br>As ONGs dirão: Preservar é viver<br>Fique sabendo, amar é cuidar<br>Tem cheiro de amor no ar</p><p>Eu vou brincar, curtir, vou sacudir essa cidade<br>GLS, adolescente, gente da melhor idade<br>Num grito de liberdade<br>Saúde e vigor quero ter pra ver<br>O milagre da vida acontecer</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>A luz do Sol<br>Brilhou, se separou da Lua<br>O primeiro homem vai surgir<br>Provando das delícias do jardim</p><p>Colorindo o paraíso<br>Eu vi o charme e o sorriso da mulher<br>Meu bem, lições de amor<br>O povo do Oriente ensinou<br>No Éden a maldade da serpente assombrou<br>Seu veneno pelo mundo espalhou</p><p>Mata essa vontade louca, me beija na boca<br>Faz meu sonho real<br>Mas se quiser me ver e ter prazer carnal<br>É bom se proteger do mal</p><p>Mata essa vontade louca, me beija na boca<br>Faz meu sonho real<br>Mas se quiser me ver e ter prazer carnal<br>É bom se proteger do mal</p><p>Na busca de um novo amanhecer<br>As ONGs dirão: Preservar é viver<br>Fique sabendo, amar é cuidar<br>Tem cheiro de amor no ar</p><p>Eu vou brincar, curtir, vou sacudir essa cidade<br>GLS, adolescente, gente da melhor idade<br>Num grito de liberdade<br>Saúde e vigor quero ter pra ver<br>O milagre da vida acontecer</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p><p>Se a Grande Rio chamou, eu vou<br>Se o assunto é coisa de pele, eu tô<br>Por isso, bota a camisinha, bota, meu amor<br>Foi o Velho Guerreiro quem mandou</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=SC-ajl6JVY4" } ],
-    "tags": ["anos-2000", "samba", "carnaval", "prevencao"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=SC-ajl6JVY4"
+      }
+    ],
+    "tags": [
+      "anos-2000",
+      "samba",
+      "carnaval",
+      "prevencao"
+    ]
   },
   {
     "id": "song19",
-    "title": "Balada de Gisberta",
+    "title": "Balada de Gisberta [Ballad of Gisberta] ",
     "artist": "Pedro Abrunhosa e Maria Bethânia",
     "year": 2007,
-    "genres": ["mpb", "balada"],
+    "genres": [
+      "mpb",
+      "balada"
+    ],
     "cover": "/assets/covers/song19.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=qtAdfNzcD3Q", "durationSec": 60 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Retrata de forma direta e sensível a história de Gisberta Salce Júnior, mulher trans, profissional do sexo e pessoa vivendo com HIV brasileira que foi cruelmente assassinada em Portugal. A canção expõe a exclusão e a violência enfrentadas por Gisberta, que acabou se tornando símbolo de discriminação múltipla ao ser privada não só de sua dignidade, mas também de sua própria história, como confirmado pelo contexto de sua busca por liberdade e pelo fim trágico que sofreu. A repetição de “O amor é tão longe” no final da canção destaca a distância entre Gisberta e qualquer forma de acolhimento, transformando a canção em um lamento sobre a falta de empatia e respeito. A infecção pelo HIV fez parte do contexto de marginalização que a tornou vítima da violência, denunciada por Pedro Abrunhosa em 2007 e popularizada por Maria Bethânia em 2009.</p>",
-    "analysisHtml": "<p>BALADA de Gisberta. Intérprete e compositor: Pedro Abrunhosa. In: LUZ. Intérprete: Pedro Abrunhosa. [S. l.]: Universal Music, 2007. 1 CD, faixa 4 (1 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=qtAdfNzcD3Q",
+      "durationSec": 60
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Retrata de forma direta e sensível a história de Gisberta Salce Júnior, mulher trans, profissional do sexo e pessoa vivendo com HIV brasileira que foi cruelmente assassinada em Portugal. A canção expõe a exclusão e a violência enfrentadas por Gisberta, que acabou se tornando símbolo de discriminação múltipla ao ser privada não só de sua dignidade, mas também de sua própria história, como confirmado pelo contexto de sua busca por liberdade e pelo fim trágico que sofreu. A repetição de “O amor é tão longe” no final da canção destaca a distância entre Gisberta e qualquer forma de acolhimento, transformando a canção em um lamento sobre a falta de empatia e respeito. A infecção pelo HIV fez parte do contexto de marginalização que a tornou vítima da violência, denunciada por Pedro Abrunhosa em 2007 e popularizada por Maria Bethânia em 2009.</p>",
+      "en": "<p>The song directly and sensitively portrays the story of Gisberta Salce Júnior, a Brazilian trans woman, sex worker and person living with HIV who was cruelly murdered in Portugal. The song exposes the exclusion and violence faced by Gisberta, who became a symbol of multiple discrimination by being deprived not only of her dignity, but also of her own history, as confirmed by the context of her search for freedom and the tragic end she suffered. The repetition of \"Love is so far\" at the end of the song highlights the distance between Gisberta and any form of acceptance, transforming the song into a lament about the lack of empathy and respect. HIV infection was part of the context of marginalization that made her a victim of violence, denounced by Pedro Abrunhosa in 2007 and popularized by Maria Bethânia in 2009.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>BALADA de Gisberta. Intérprete e compositor: Pedro Abrunhosa. In: LUZ. Intérprete: Pedro Abrunhosa. [S. l.]: Universal Music, 2007. 1 CD, faixa 4 (1 min).</p>",
+      "en": "<p>BALADA de Gisberta. Performer and composer: Pedro Abrunhosa. In: LUZ. Performer: Pedro Abrunhosa. [S. l.]: Universal Music, 2007. 1 CD, track 4 (1 min).</p>"
+    },
     "transcriptHtml": "<p>Perdi-me do nome<br>Hoje podes chamar-me de tua<br>Dancei em palácios<br>Hoje, danço na rua<br>Vesti-me de sonhos<br>Hoje, visto as bermas da estrada<br>De que serve voltar<br>Quando se volta pro nada?</p><p>Eu não sei se um anjo me chama<br>Eu não sei dos mil homens na cama, e o céu não pode esperar<br>Eu não sei se a noite me leva<br>Não ouço o meu grito na treva<br>O fim quer me buscar</p><p>Sambei na avenida<br>No escuro, fui porta-estandarte<br>Apagaram-se as luzes<br>É o futuro que parte<br>Escrevi um desejo<br>Corações que já esqueci<br>Com sedas matei e com ferros morri</p><p>Eu não sei se um anjo me chama<br>Eu não sei de mil homens na cama, e o céu não pode esperar<br>Eu não sei se a noite me leva<br>Eu não ouço o meu grito na treva, e o fim quer me buscar</p><p>Trouxe pouco<br>Levo menos<br>A distância até o fundo é tão pequena<br>No fundo, é tão pequena<br>A queda</p><p>E o amor<br>É tão longe<br>O amor é tão longe<br>O amor é tão longe<br>O amor é tão longe</p>",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=qtAdfNzcD3Q" } ],
-    "tags": ["anos-2000", "mpb", "trans", "violencia", "hiv"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=qtAdfNzcD3Q"
+      }
+    ],
+    "tags": [
+      "anos-2000",
+      "mpb",
+      "trans",
+      "violencia",
+      "hiv"
+    ]
   },
   {
     "id": "song20",
-    "title": "Sorria",
+    "title": "Sorria [Smile] ",
     "artist": "Gaê, Lui e Aqno",
     "year": 2022,
-    "genres": ["rap", "hip-hop"],
+    "genres": [
+      "rap",
+      "hip-hop"
+    ],
     "cover": "/assets/covers/song20.jpeg",
-    "preview": { "src": "https://www.youtube.com/watch?v=N1FfQVLnzdI", "durationSec": 120 },
-    "audioDescription": { "src": "/assets/audio/ad1.wav", "durationSec": 2 },
-    "synopsisHtml": "<p>Um manifesto em forma de canção, “Sorria” surgiu como um desabafo após um tweet de Gaê, em outubro de 2022, sobre a insegurança de viver com o HIV, mencionando a falta de medicamentos e cortes no orçamento governamental destinado ao atendimento da doença. O tweet viralizou e foi amplamente compartilhado por veículos de imprensa e seguidores, o que levou o artista a se sentir acuado e, involuntariamente, à frente de um movimento que não havia iniciado.</p><p>A canção, lançada no Dia Mundial de Luta contra a Aids (1º de dezembro), critica como a mídia e até mesmo pessoas do seu convívio se apropriaram do seu sofrimento e o reproduziram para ganho pessoal. Na canção, Gaê denuncia a despersonalização e o estigma enfrentados por pessoas que vivem com o HIV.</p><p>“Sorria” serve como um manifesto que exige que as pessoas olhem além da doença e reconheçam a dignidade das pessoas vivendo com HIV ou aids, confrontando a hipocrisia social que se compadece do sofrimento, mas ignora a vida e a arte.</p>",
-    "analysisHtml": "<p>SORRIA. Intérprete: Gaê. Compositores: Gaê, Lui e Aqno. In: SORRIA. Intérprete: Gaê. [S. l.]: Tratore, 2007. 1 single (2 min).</p>",
+    "preview": {
+      "src": "https://www.youtube.com/watch?v=N1FfQVLnzdI",
+      "durationSec": 120
+    },
+    "audioDescription": {
+      "src": "/assets/audio/ad1.wav",
+      "durationSec": 2
+    },
+    "synopsisHtml": {
+      "pt-br": "<p>Um manifesto em forma de canção, “Sorria” surgiu como um desabafo após um tweet de Gaê, em outubro de 2022, sobre a insegurança de viver com o HIV, mencionando a falta de medicamentos e cortes no orçamento governamental destinado ao atendimento da doença. O tweet viralizou e foi amplamente compartilhado por veículos de imprensa e seguidores, o que levou o artista a se sentir acuado e, involuntariamente, à frente de um movimento que não havia iniciado.</p><p>A canção, lançada no Dia Mundial de Luta contra a Aids (1º de dezembro), critica como a mídia e até mesmo pessoas do seu convívio se apropriaram do seu sofrimento e o reproduziram para ganho pessoal. Na canção, Gaê denuncia a despersonalização e o estigma enfrentados por pessoas que vivem com o HIV.</p><p>“Sorria” serve como um manifesto que exige que as pessoas olhem além da doença e reconheçam a dignidade das pessoas vivendo com HIV ou aids, confrontando a hipocrisia social que se compadece do sofrimento, mas ignora a vida e a arte.</p>",
+      "en": "<p>A manifesto in the form of a song, \"Sorria\" emerged as an outburst by the singer Gaê about the aftermath of a tweet from October 2022 in which he commented on the insecurity of living with HIV, mentioning the lack of medicines and cuts in the government budget allocated to treating the disease. The tweet went viral and was widely shared by his followers and media outlets, which made the artist feel cornered and, unwittingly, at the forefront of a movement he had not started.</p><p>The song, released on World AIDS Day (December 1st), criticizes how the media and even people around him appropriated his suffering and reproduced it for personal gain. In the song, Gaê denounces the depersonalization and stigma faced by people living with HIV.</p><p>\"Sorria\" acts as a manifesto that demands that people look beyond the disease and recognize the dignity of people living with HIV or AIDS, confronting the social hypocrisy that sympathizes with suffering but ignores life and art.</p>"
+    },
+    "analysisHtml": {
+      "pt-br": "<p>SORRIA. Intérprete: Gaê. Compositores: Gaê, Lui e Aqno. In: SORRIA. Intérprete: Gaê. [S. l.]: Tratore, 2007. 1 single (2 min).</p>",
+      "en": "<p>SORRIA. Performer: Gaê. Composers: Gaê, Lui, and Aqno. In: SORRIA. Performer: Gaê. [S. l.]: Tratore, 2007. 1 single (2 min).</p>"
+    },
     "transcriptHtml": "",
-    "sources": [ { "label": "YouTube", "url": "https://www.youtube.com/watch?v=N1FfQVLnzdI" } ],
-    "tags": ["anos-2020", "rap", "gae", "ativismo", "hiv"]
+    "sources": [
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/watch?v=N1FfQVLnzdI"
+      }
+    ],
+    "tags": [
+      "anos-2020",
+      "rap",
+      "gae",
+      "ativismo",
+      "hiv"
+    ]
   }
 ]

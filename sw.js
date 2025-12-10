@@ -1,5 +1,5 @@
 // Service Worker for História Cantada PWA
-const VERSION = "v202511232100";
+const VERSION = "v202512102020"; // v. 10/12/2025, 20:20
 const CACHE_NAME = `historia-cantada-${VERSION}`;
 
 // Files to cache for offline support

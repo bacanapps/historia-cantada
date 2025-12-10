@@ -1,13 +1,21 @@
 {
-  "title": "A História Cantada da Aids no Brasil",
-  "introHtml": "<p>A década de 1980 foi marcada pelo surgimento da epidemia de aids e pelo auge do pop rock brasileiro. O samba também fez contribuições ao tema neste período. Não por acaso, diversos artistas, bandas e até escolas de samba abordaram a temática em suas canções e enredos. Convidamos você a conhecer "A História Cantada da Aids" e as possíveis relações síncronas entre cultura e epidemia. </p><p>Parte-se do pressuposto que as músicas possuem potencialidades de interpretação e reflexão social, pois, ao mesmo tempo em que expressam sentimentos individuais, revelam e problematizam questões coletivas, culturais e históricas da resposta brasileira à aids.</p>",
+  "title": {
+    "pt-br": "A História Cantada da Aids no Brasil",
+    "en": "The Musical History of AIDS in Brazil"
+  },
+  "introHtml": {
+    "pt-br": "<p>A década de 1980 foi marcada pelo surgimento da epidemia de aids e pelo auge do pop rock brasileiro. O samba também fez contribuições ao tema neste período. Não por acaso, diversos artistas, bandas e até escolas de samba abordaram a temática em suas canções e enredos. Convidamos você a conhecer "A História Cantada da Aids" e as possíveis relações síncronas entre cultura e epidemia. </p><p>Parte-se do pressuposto que as músicas possuem potencialidades de interpretação e reflexão social, pois, ao mesmo tempo em que expressam sentimentos individuais, revelam e problematizam questões coletivas, culturais e históricas da resposta brasileira à aids.</p>",
+    "en": "<p>The 1980s were marked by the emergence of AIDS and the heyday of Brazilian pop rock. Samba also contributed to the theme during this period. It is no coincidence that several artists, bands, and even samba schools addressed the epidemic in their songs and storylines. We invite you to learn about \"The Sung History of AIDS\" and the possible synchronous relationships between culture and the epidemic.</p><p>We start from the premise that these songs have potential for interpretation and social reflection, because, while expressing individual feelings, they reveal and problematize collective, cultural, and historical issues in Brazil's response to AIDS.</p>"
+  },
   "audioDescription": {
-    "src": "./assets/audio/presentation.mp3",
-    "durationSec": 2
+    "pt-br": {
+      "src": "./assets/audio/presentation.mp3",
+      "durationSec": 2
+    }
   },
   "heroImage": "./assets/img/logo_aids_40anos.png",
   "credits": [
     { "role": "Curadoria", "name": "Nome do Curador" }
   ],
-  "language": "pt-BR"
+  "language": "multi"
 }
