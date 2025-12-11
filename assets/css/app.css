@@ -74,22 +74,47 @@
   .filter-chip-active{ border-color:#16a34a; }
 }
 
-/* Language toggle buttons */
+/* Language toggle button - Fixed position top-right */
 .language-toggle-btn {
-  padding: 6px 12px;
-  background: var(--color-brand-accent);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  position: fixed;
+  top: 1.5rem;
+  right: calc(1.5rem + 48px + 20px);
+  height: 48px;
+  padding: 0 0.75rem;
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
   font-size: 0.875rem;
   font-weight: 600;
-  transition: opacity 0.2s;
-  z-index: 100;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .language-toggle-btn:hover {
-  opacity: 0.85;
+  background: rgba(30, 41, 59, 0.8);
+  transform: scale(1.05);
+}
+
+.language-toggle-btn:active {
+  transform: scale(1.02);
+}
+
+:root[data-theme="light"] .language-toggle-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+}
+
+:root[data-theme="light"] .language-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: scale(1.05);
 }
 
 .footer-lang-toggle {
