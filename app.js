@@ -437,7 +437,7 @@
         voltar: 'Back'
       },
       home: {
-        heroTitle: 'The Musical History of AIDS in Brazil',
+        heroTitle: 'The Musical History of AIDS',
         heroDesc: 'Discover songs about AIDS in Brazil, their stories, and analyses.',
         cardApresentacao: {
           title: 'Introduction',
